@@ -1,5 +1,5 @@
 site:
-  name: Encrypπion
+  name: Encrypttion
   site: 'https://encrypttion.com'
   base: '/'
   trailingSlash: false
@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: Encrypπion
-    template: '%s — Encrypπion'
-  description: "\U0001F680 Secure your digital assets with Encrypπion, a leading cybersecurity firm in the San Francisco Bay Area. We specialize in application security assessments, network security, AI-powered code reviews, API security, and threat modeling. Our expert team provides cutting-edge security solutions tailored to your business needs, ensuring robust protection against cyber threats. Contact us today to fortify your IT infrastructure and achieve peace of mind. Trusted by businesses in Silicon Valley and beyond."
+    default: Encrypttion
+    template: '%s — Encrypttion'
+  description: "\U0001F680 Secure your digital assets with Encrypttion, a leading cybersecurity firm in the San Francisco Bay Area. We specialize in application security assessments, network security, AI-powered code reviews, API security, and threat modeling. Our expert team provides cutting-edge security solutions tailored to your business needs, ensuring robust protection against cyber threats. Contact us today to fortify your IT infrastructure and achieve peace of mind. Trusted by businesses in Silicon Valley and beyond."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: Encrypπion
+    site_name: Encrypttion
     images:
       - url: '~/assets/images/encrypttionlogo.svg'
         width: 1200
