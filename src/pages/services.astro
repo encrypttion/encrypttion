@@ -15,12 +15,13 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
+    id="services1"
     tagline="Services"
-    title="Elevate your projects with our stunning templates"
-    subtitle="Explore our meticulously crafted templates tailored to various industries and purposes. From captivating presentations to functional website designs, we offer the tools you need to succeed."
-    actions={[{ variant: 'primary', target: '_blank', text: 'Start exploring', href: '/' }]}
+    title="Tailored Cybersecurity Solutions for Your Unique Security Challenges"
+    subtitle="At Encrypπion, we offer comprehensive application security assessment services designed to safeguard your applications from potential threats and vulnerabilities. At Encrypπion, we are committed to delivering top-notch application security assessment services that help you protect your critical applications, safeguard your data, and maintain the trust of your users. Contact us today to learn more about how we can help you secure your applications."
+    actions={[{ variant: 'primary', text: 'Start exploring', href: '#services2' }]}
     image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+      src: '~/assets/images/services.png',
       alt: 'AstroWind Hero Image',
     }}
   />
@@ -28,103 +29,129 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Explore our diverse templates"
-    subtitle="Discover our selection below to streamline and elevate your projects."
+    id="services2"
+    title="Explore our services"
+    subtitle="Discover how we can help with your cybersecurity challenges."
     columns={3}
     items={[
       {
-        title: 'Educational',
+        title: 'Application Security Assessment',
         description:
-          'By harmonizing instructional design and visual appeal, templates streamline content creation for varied materials, expediting development and cultivating engaging educational spaces.',
-        icon: 'tabler:school',
+          'While automated tools are essential for identifying common vulnerabilities, they often miss complex and context-specific security issues. Our manual application security assessment services offer a deeper, more thorough examination of your applications by experienced security professionals. Manual application security assessments are crucial for uncovering complex vulnerabilities that automated tools might miss. At Encrypπion, our team of seasoned security professionals is dedicated to providing thorough and precise assessments, helping you build and maintain secure applications. Contact us today to learn more about our manual application security assessment services and how we can help protect your applications from advanced threats. <br><a href="#services3">Read more...</a>',
+        icon: 'tabler:cloud-lock',
+        
       },
       {
-        title: 'Interior Design',
+        title: 'API Security Assessment',
         description:
-          'Crafting functional, visually appealing spaces for residential and commercial use. Templates emphasize layout, colors, and furniture setups, offering a versatile toolkit for your design vision.',
-        icon: 'tabler:home-star',
+          'In today’s interconnected digital ecosystem, Application Programming Interfaces (APIs) play a critical role in enabling communication between different applications and services. However, APIs can also be a major security risk if not properly protected. Our API security assessment services focus on identifying and mitigating vulnerabilities in your APIs to ensure they are secure from potential threats. APIs are a vital part of modern applications, and their security is paramount to protecting your data and maintaining user trust. At Encrypπion, we provide thorough API security assessment services to help you identify vulnerabilities, implement robust security measures, and ensure that your APIs are resilient against potential threats. Contact us today to learn more about how we can help secure your APIs.<br><a href="#services4">Read more...</a>',
+        icon: 'tabler:circle-key',
       },
       {
-        title: 'Photography',
-        description: `Empowering photographers, our templates facilitate captivating storytelling. With a keen focus on layout, galleries, and typography, they cater to both professionals and enthusiasts.`,
-        icon: 'tabler:photo',
+        title: 'Application Threat Modeling',
+        description: `Application threat modeling is a proactive approach to identifying and mitigating potential security threats before they become vulnerabilities. Our threat modeling services involve:
+Application threat modeling is an essential component of a robust security strategy. By identifying and addressing potential threats early in the development process, you can significantly reduce the risk of security breaches and ensure your application is resilient against attacks. At Encrypπion, we help you build secure applications from the ground up, providing peace of mind and protecting your valuable assets. Contact us today to learn more about our application threat modeling services.<br><a href="#services5">Read more...</a>`,
+        icon: 'tabler:box-model',
       },
       {
-        title: 'E-commerce',
+        title: 'AI-Powered Security Code Reviews',
         description:
-          'Developing engaging online stores, our E-commerce templates ensure a dynamic presence to effectively showcase products. Ideal for startups or revamps.',
-        icon: 'tabler:shopping-cart',
+          'Leveraging the power of artificial intelligence and large language models (LLMs), our AI-powered security code review services provide a cutting-edge approach to identifying and mitigating security vulnerabilities in your application code. AI-powered security code reviews represent the future of application security, combining the speed and scalability of AI with the expertise of seasoned security professionals. At Encrypπion, we are committed to providing state-of-the-art security solutions that help you build and maintain secure applications. Contact us today to learn more about our AI-powered security code review services and how we can help protect your code from emerging threats.<br><a href="#services6">Read more...</a>',
+        icon: 'tabler:ai',
       },
       {
-        title: 'Blog',
+        title: 'Mobile Application Security Testing',
         description:
-          'With attention to typography, these templates empower effective content presentation for writers at any stage, ensuring visually engaging and user-friendly blogs.',
-        icon: 'tabler:article',
+          'With the increasing use of mobile applications, it’s crucial to ensure their security. Our mobile application security testing services cover both iOS and Android platforms, identifying vulnerabilities specific to mobile environments. We assess aspects such as data storage, communication security, and application permissions to protect your mobile users.',
+        icon: 'tabler:device-mobile',
       },
       {
-        title: 'Business',
+        title: 'Penetration Testing',
         description:
-          'Providing polished options for effective visual communication, these templates empower both startups and established companies for a professional brand presence.',
-        icon: 'tabler:building-store',
+          'Our penetration testing services go beyond automated scans, involving expert security professionals who perform simulated attacks on your applications. This rigorous approach helps identify complex vulnerabilities that automated tools might miss, offering a deep understanding of your application’s security weaknesses and how to address them.',
+        icon: 'tabler:user-pentagon',
       },
       {
-        title: 'Branding',
+        title: 'Cloud Application Security Assessment',
         description:
-          'Offering pre-designed elements for a consistent brand identity, including logos and marketing materials. Ideal for new ventures or revamps.',
-        icon: 'tabler:arrow-big-up-lines',
+          'As applications increasingly migrate to the cloud, securing them becomes paramount. We provide specialized cloud application security assessments that focus on identifying and mitigating risks unique to cloud environments. Our experts evaluate your cloud infrastructure, configurations, and compliance with industry standards to ensure your applications are secure in the cloud.',
+        icon: 'tabler:clock-shield',
       },
       {
-        title: 'Medical',
-        description: `From presentations to patient forms, these tools enhance communication effectiveness for healthcare professionals. Ideal for medical practices and research pursuits.`,
-        icon: 'tabler:vaccine',
+        title: 'Security Awareness Training',
+        description: `Empowering your development team with the knowledge and skills to write secure code is critical. We offer tailored security awareness training programs that educate your developers on common security pitfalls, secure coding practices, and the latest security trends. This proactive approach helps prevent security issues from arising in the first place.`,
+        icon: 'tabler:users-group',
       },
       {
-        title: 'Fashion Design',
+        title: 'Network Security',
         description:
-          'With attention to detail, customization, and contemporary design, they empower designers to showcase ideas cohesively. Ideal for all levels of designers.',
-        icon: 'tabler:tie',
+        `At Encrypπion, we offer a comprehensive suite of network security services designed to protect your organization's IT infrastructure from potential threats. Our network security services ensure that your networks are resilient against attacks, safeguarding your data and maintaining business continuity.<br><a href="#services7">Read more...</a>`,
+        icon: 'tabler:network',
       },
     ]}
   />
 
   <!-- Content Widget **************** -->
 
-  <Content
+  <Content 
     isReversed
     items={[
       {
-        title: 'High-Quality Designs',
+        
+        title: 'In-Depth Vulnerability Analysis',
         description:
-          'Our templates feature top-tier designs that ensure a professional and polished appearance for your projects.',
+          'Our security experts perform a detailed, hands-on review of your application, focusing on areas that automated tools might overlook. This includes business logic flaws, authentication and authorization issues, and intricate vulnerabilities specific to your application’s architecture.',
         icon: 'tabler:wand',
+               
       },
       {
-        title: 'Customization Tools',
+        title: 'Customized Testing Approach',
         description:
-          'Tailor each template to your unique needs with user-friendly customization tools that let you personalize colors, fonts, and content.',
+          'We tailor our testing approach to the unique characteristics of your application. This includes understanding your application’s purpose, user roles, and potential threat scenarios, ensuring a comprehensive security evaluation.',
         icon: 'tabler:settings',
       },
       {
-        title: 'Pre-Designed Elements',
+        title: 'Real-World Attack Simulation',
         description:
-          'Save time and effort with our ready-to-use elements, including graphics, icons, and layouts that enhance the visual appeal of your creations.',
+          'Our experts simulate real-world attacks to test your application’s defenses. This includes manual exploitation techniques that mimic the tactics used by advanced attackers, providing insights into how well your application can withstand sophisticated threats.',
         icon: 'tabler:presentation',
       },
       {
-        title: 'Preview and Mockup Views',
+        title: 'Detailed Findings and Recommendations',
         description:
-          'Visualize the final outcome before making any changes using our preview and mockup views, ensuring your projects meet your expectations.',
+          'After the assessment, we provide a detailed report that includes our findings, the potential impact of identified vulnerabilities, and prioritized recommendations for remediation. Our goal is to equip you with actionable insights to enhance your application’s security.',
+        icon: 'tabler:carousel-horizontal',
+      },
+      {
+        title: 'Collaborative Remediation Support',
+        description:
+          'We work closely with your development and security teams to address the identified vulnerabilities. Our experts provide guidance and support to ensure effective remediation, helping you strengthen your application’s security posture.',
+        icon: 'tabler:carousel-horizontal',
+      },
+      {
+        title: 'Verification Testing',
+        description:
+          'Once remediation efforts are complete, we conduct follow-up testing to verify that vulnerabilities have been successfully addressed. This ensures that your application is secure and that no new issues have been introduced.',
+        icon: 'tabler:carousel-horizontal',
+      },
+      {
+        title: 'Compliance Assurance',
+        description:
+          'Our manual assessments also help ensure that your application meets relevant industry standards and regulatory requirements. We provide documentation and support for compliance with frameworks such as PCI-DSS, HIPAA, and GDPR.',
         icon: 'tabler:carousel-horizontal',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
+      src: '~/assets/images/appsec.png',
       alt: 'Features Image',
+      
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Main Features</h3>
+
+      <h3 id="services3" class="text-xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Application Security Assessment</h3>
     </Fragment>
+   
   </Content>
 
   <!-- Content Widget **************** -->
@@ -133,43 +160,280 @@ const metadata = {
     isAfterContent
     items={[
       {
-        title: 'Time Savings',
+        title: 'Comprehensive API Inventory',
         description:
-          'Streamline your workflow, enabling you to create stunning materials efficiently and allocate more time to your core tasks.',
+          'We start by creating a detailed inventory of all your APIs, including public, private, and partner APIs. This inventory helps in understanding the scope of the assessment and ensuring that no API endpoints are overlooked.',
         icon: 'tabler:clock',
       },
       {
-        title: 'Professional Appearance',
+        title: 'Authentication and Authorization Review ',
         description:
-          'Elevate your projects with the polished and sophisticated look that our templates provide, making a lasting impression on your audience.',
+          'Our experts evaluate the authentication and authorization mechanisms in place for your APIs. We ensure that only authorized users and applications have access to your APIs and that sensitive data is adequately protected.',
         icon: 'tabler:school',
       },
       {
-        title: 'Cost-Efficiency',
+        title: 'Input Validation and Sanitization',
         description:
-          'Benefit from cost savings by avoiding the need for custom design work, as our templates offer professional-grade designs at a fraction of the cost.',
+          'We test your APIs for proper input validation and sanitization to prevent common attacks such as SQL injection, cross-site scripting (XSS), and command injection. Ensuring that your APIs handle user inputs securely is crucial for preventing exploitation.',
         icon: 'tabler:coin',
       },
       {
-        title: 'Instant Download',
+        title: 'Rate Limiting and Throttling',
         description:
-          'Enjoy immediate access to your chosen templates upon purchase, enabling you to begin working on your projects without delay.',
+          'To prevent abuse and denial-of-service attacks, we assess the implementation of rate limiting and throttling mechanisms. These controls help manage the number of requests that your APIs can handle, protecting them from being overwhelmed.',
+        icon: 'tabler:file-download',
+      },
+      {
+        title: 'Data Exposure and Privacy',
+        description:
+          'Our assessment includes a thorough review of how your APIs handle sensitive data. We check for issues such as data leakage, insufficient encryption, and improper handling of personally identifiable information (PII).',
+        icon: 'tabler:file-download',
+      },
+      {
+        title: 'Error Handling and Logging',
+        description:
+          'Proper error handling and logging are essential for both security and troubleshooting. We evaluate how your APIs handle errors and ensure that they do not expose sensitive information or provide clues that could aid attackers.',
+        icon: 'tabler:file-download',
+      },
+      {
+        title: 'Security Best Practices and Compliance',
+        description:
+          'After the assessment, we provide a detailed report that includes our findings, potential impacts, and prioritized recommendations for remediation. Our goal is to help you understand the security posture of your APIs and take actionable steps to improve it.',
+        icon: 'tabler:file-download',
+      },
+      {
+        title: 'Detailed Reporting and Recommendations',
+        description:
+          'To prevent abuse and denial-of-service attacks, we assess the implementation of rate limiting and throttling mechanisms. These controls help manage the number of requests that your APIs can handle, protecting them from being overwhelmed.',
+        icon: 'tabler:file-download',
+      },
+      {
+        title: 'Remediation Support and Verification',
+        description:
+          'We offer support to help you address identified vulnerabilities and implement recommended security measures. Once remediation is complete, we conduct verification testing to ensure that the issues have been resolved effectively.',
         icon: 'tabler:file-download',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1552664688-cf412ec27db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+      src: '~/assets/images/apisec.png',
       alt: 'Benefits Image',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Benefits</h3>
+      <h3 id="services4" class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">API Security Assessment</h3>
     </Fragment>
   </Content>
 
+<!-- Content Widget **************** -->
+
+  <Content
+  isReversed
+  items={[
+    {
+      title: 'Identifying Assets and Entry Points',
+      description:
+        'We start by understanding your application architecture, identifying critical assets, data flows, and potential entry points that attackers might target.',
+      icon: 'tabler:wand',
+    },
+    {
+      title: 'Assessing Threats and Vulnerabilities',
+      description:
+        'Our experts analyze the identified assets and entry points to evaluate potential threats and vulnerabilities. We use industry-standard frameworks and methodologies to ensure a comprehensive assessment.',
+      icon: 'tabler:settings',
+    },
+    {
+      title: 'Developing Attack Scenarios',
+      description:
+        'We create realistic attack scenarios based on the identified threats. These scenarios help in understanding how an attacker might exploit vulnerabilities and the potential impact on your application.',
+      icon: 'tabler:presentation',
+    },
+    {
+      title: 'Detailed Findings and Recommendations',
+      description:
+        'After the assessment, we provide a detailed report that includes our findings, the potential impact of identified vulnerabilities, and prioritized recommendations for remediation. Our goal is to equip you with actionable insights to enhance your application’s security.',
+      icon: 'tabler:carousel-horizontal',
+    },
+    {
+      title: 'Prioritizing Risks',
+      description:
+        'We prioritize the identified risks based on their potential impact and likelihood of occurrence. This helps in focusing remediation efforts on the most critical threats.',
+      icon: 'tabler:carousel-horizontal',
+    },
+    {
+      title: 'Recommending Mitigations',
+      description:
+        'We deliver a detailed threat model report that includes all findings, attack scenarios, risk prioritization, and recommended mitigations. This document serves as a valuable resource for ongoing security efforts and future assessments.',
+      icon: 'tabler:carousel-horizontal',
+    },
+    {
+      title: 'Documenting the Threat Model',
+      description:
+        'Our manual assessments also help ensure that your application meets relevant industry standards and regulatory requirements. We provide documentation and support for compliance with frameworks such as PCI-DSS, HIPAA, and GDPR.',
+      icon: 'tabler:carousel-horizontal',
+    },
+  ]}
+  image={{
+    src: '~/assets/images/threatsec.png',
+    alt: 'Features Image',
+  }}
+>
+  <Fragment slot="content">
+    <h3 id="services5" class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Application Threat Modeling</h3>
+  </Fragment>
+</Content>
+
+ 
+<!-- Content Widget **************** -->
+
+<Content
+isReversed
+items={[
+  {
+    title: 'Automated Code Analysis',
+    description:
+      'Utilizing advanced AI algorithms, we perform automated code analysis to quickly and accurately identify potential security issues. This includes detecting common vulnerabilities such as buffer overflows, injection flaws, and insecure coding practices.',
+    icon: 'tabler:wand',
+  },
+  {
+    title: 'Contextual Understanding',
+    description:
+      'Our AI models have a deep understanding of code context, allowing them to identify complex and context-specific security issues that traditional static analysis tools might miss. This includes business logic flaws, improper error handling, and insecure data handling practices.',
+    icon: 'tabler:settings',
+  },
+  {
+    title: 'Comprehensive Coverage',
+    description:
+      'AI-powered code reviews cover a wide range of programming languages and frameworks, ensuring comprehensive security analysis for all parts of your application. Whether you are using Java, Python, JavaScript, or any other language, our AI tools are equipped to handle it.',
+    icon: 'tabler:presentation',
+  },
+  {
+    title: 'Scalable and Efficient',
+    description:
+      'AI-powered code reviews can scale to handle large codebases efficiently, providing faster results compared to manual reviews. This enables your development teams to receive timely feedback and address security issues promptly.',
+    icon: 'tabler:carousel-horizontal',
+  },
+  {
+    title: 'Continuous Learning and Improvementur ',
+    description:
+      'AI models continuously learn and improve from a vast dataset of code patterns and security vulnerabilities. This ensures that our tools stay up-to-date with the latest security threats and coding practices, providing you with the most accurate and effective security assessments.',
+    icon: 'tabler:carousel-horizontal',
+  },
+  {
+    title: 'Integration with Development Workflows',
+    description:
+      'Our AI-powered tools seamlessly integrate with your existing development workflows and CI/CD pipelines. This allows for continuous security monitoring and code reviews, ensuring that security is embedded throughout the development lifecycle.',
+    icon: 'tabler:carousel-horizontal',
+  },
+  {
+    title: 'Detailed Reporting and Insights',
+    description:
+      'After the code review, we provide detailed reports that include identified vulnerabilities, potential impacts, and recommended remediation steps. Our reports are designed to be actionable, helping your developers understand and fix security issues effectively.',
+    icon: 'tabler:carousel-horizontal',
+  },
+  {
+    title: 'Expert Oversight and Validation',
+    description:
+      'While AI tools provide powerful automated analysis, our security experts review and validate the findings to ensure accuracy and relevance. This combination of AI efficiency and human expertise ensures the highest quality of security assessment.',
+    icon: 'tabler:carousel-horizontal',
+  }
+  ,
+  {
+    title: 'Security Best Practices and Compliance',
+    description:
+      'We ensure that your code adheres to industry security best practices and compliance requirements. Our AI tools are aligned with standards such as OWASP, SANS, and various regulatory frameworks, helping you maintain compliance and secure coding standards.',
+    icon: 'tabler:carousel-horizontal',
+  }
+]}
+image={{
+  src: '~/assets/images/aisec.png',
+  alt: 'Features Image',
+}}
+>
+<Fragment slot="content">
+  <h3 id="services6" class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">AI-Powered Security Code Reviews</h3>
+</Fragment>
+</Content>
+
+<!-- Content Widget **************** -->
+
+<Content
+isAfterContent
+items={[
+  {
+    title: 'External Penetration Testing',
+    description:
+      'Our external penetration testing services are designed to simulate real-world attacks from external threats, providing a thorough assessment of your network’s defenses.',
+    icon: 'tabler:clock',
+  },
+  {
+    title: 'Internal Penetration Testing',
+    description:
+      'Internal penetration testing focuses on evaluating the security of your internal network from the perspective of an insider threat or a compromised internal system.',
+    icon: 'tabler:school',
+  },
+  {
+    title: 'Reconnaissance and Information Gathering',
+    description:
+      'We start by gathering information about your network footprint, including domain names, IP addresses, and publicly accessible services. This helps us identify potential entry points for attackers.',
+    icon: 'tabler:coin',
+  },
+  {
+    title: 'Vulnerability Scanning',
+    description:
+      'Using advanced tools, we scan your  network for vulnerabilities such as open ports, outdated software, and misconfigurations. This helps us identify weaknesses that could be exploited by attackers.',
+    icon: 'tabler:file-download',
+  },
+  {
+    title: 'Vulnerability Assessment',
+    description:
+      'Using advanced scanning tools, we identify vulnerabilities within your internal network, including unpatched systems, misconfigurations, and insecure protocols. This helps us pinpoint potential security weaknesses.',
+    icon: 'tabler:file-download',
+  },
+  {
+    title: 'Exploitation and Lateral Movement',
+    description:
+      'Our experts simulate attacks to exploit identified vulnerabilities and test your internal defenses. This includes attempting lateral movement to assess how easily an attacker can move within your network and access sensitive systems.',
+    icon: 'tabler:file-download',
+  },
+  {
+    title: 'Exploitation and Attack Simulation',
+    description:
+      'Our security experts simulate attacks on your external network to test its defenses. This includes exploiting identified vulnerabilities to assess their potential impact and gain unauthorized access.',
+    icon: 'tabler:file-download',
+  },
+  {
+    title: 'Privilege Escalation',
+    description:
+      'We test for privilege escalation vulnerabilities that could allow attackers to gain higher levels of access within your network. This helps in identifying critical weaknesses that could lead to significant security breaches.',
+    icon: 'tabler:file-download',
+  },
+  {
+    title: 'Post-Exploitation Analysis',
+    description:
+      'Once access is gained, we analyze the extent of the breach, including data access, potential lateral movement, and persistence mechanisms. This helps in understanding the full impact of a successful attack.',
+    icon: 'tabler:file-download',
+  },
+  {
+    title: 'Detailed Reporting and Remediation Recommendations',
+    description:
+      'We provide a comprehensive report detailing our findings, including identified vulnerabilities, exploitation techniques, and recommended remediation steps. Our goal is to help you strengthen your external defenses and mitigate identified risks.',
+    icon: 'tabler:file-download',
+  },
+]}
+image={{
+  src: '~/assets/images/netsec.png',
+  alt: 'Benefits Image',
+}}
+>
+<Fragment slot="content">
+  <h3 id="services7"  class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Network Security</h3>
+</Fragment>
+</Content>
+
+
   <!-- Testimonials Widget *********** -->
 
-  <Testimonials
+  <!-- <Testimonials
     title="Words from real customers"
     testimonials={[
       {
@@ -206,19 +470,27 @@ const metadata = {
       href: 'https://github.com/onwidget/astrowind',
       icon: 'tabler:chevron-right',
     }}
-  />
+  /> -->
 
-  <!-- CallToAction Widget *********** -->
+  <!-- Features2 Widget ************** -->
 
-  <CallToAction
-    actions={[
+  <Features2
+    title="Technical Support"
+    tagline="Contact us"
+    columns={2}
+    items={[
       {
-        variant: 'primary',
-        text: 'Start exploring',
-        href: '/',
+        title: 'Chat with us',
+        description:
+          'Wherever you are, we are here to help you. We are available 24/7 to answer your questions.',
+        icon: 'tabler:messages',
+      },
+      {
+        title: 'Call us',
+        description:
+          'We are available 24/7 to answer your questions. We are here to help you.',
+        icon: 'tabler:headset',
       },
     ]}
-    title="Dive into our template collection"
-    subtitle="Whether you're in business, design, or education, our templates are here to elevate your projects."
   />
 </Layout>
