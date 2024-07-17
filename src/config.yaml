@@ -18,7 +18,7 @@ metadata:
   openGraph:
     site_name: Encrypttion
     images:
-      - url: '~/assets/images/encrypttionlogo.svg'
+      - url: '~/assets/images/encrypttion.png'
         width: 1200
         height: 628
     type: website
