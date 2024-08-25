@@ -6,13 +6,13 @@ export const headerData = {
       text: 'Home',
       href: getPermalink('/'),
     },
+    //{
+    //  text: 'About',
+    //  href: getPermalink('/about'),
+    //
+    //},
     {
-      text: 'About',
-      href: getPermalink('/about'),
-      
-    },
-    {
-      text: 'Services',
+      text: 'Solutions',
       href: getPermalink('/services/#services1'),
       links: [
         {
@@ -43,10 +43,10 @@ export const headerData = {
           text: 'Cloud Application Security Assessment',
           href: getPermalink('/services'),
         },
-        {
-          text: 'Security Awareness Training',
-          href: getPermalink('/services'),
-        },
+        //{
+        //  text: 'Security Awareness Training',
+        //  href: getPermalink('/services'),
+        //},
         {
           text: 'Network Security',
           href: getPermalink('/services'),
@@ -107,7 +107,7 @@ export const footerData = {
     {
       title: 'Company',
       links: [
-        { text: 'About', href: '/about' },
+        //{ text: 'About', href: '/about' },
         { text: 'Contact', href: '/contact' },
         { text: 'Resources', href: '/resources' },
         // { text: 'Press', href: '#' },
@@ -123,7 +123,7 @@ export const footerData = {
   ],
   socialLinks: [
     // { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
-    { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/company/encrypttion/' },
+    { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/company/sekurai/' },
     // { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
     // { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
     // { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },

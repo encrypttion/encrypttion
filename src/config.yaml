@@ -1,6 +1,6 @@
 site:
-  name: Encrypttion
-  site: 'https://encrypttion.com'
+  name: Sekura
+  site: 'https://sekura.ai'
   base: '/'
   trailingSlash: false
 
@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: Encrypttion
-    template: '%s — Encrypttion'
-  description: "\U0001F680 Secure your digital assets with Encrypttion, a leading cybersecurity firm in the San Francisco Bay Area. We specialize in application security assessments, network security, AI-powered code reviews, API security, and threat modeling. Our expert team provides cutting-edge security solutions tailored to your business needs, ensuring robust protection against cyber threats. Contact us today to fortify your IT infrastructure and achieve peace of mind. Trusted by businesses in Silicon Valley and beyond."
+    default: Sekura
+    template: '%s — Sekura'
+  description: "\U0001F680 Secure your digital assets with Sekura, a leading cybersecurity firm in the San Francisco Bay Area. We specialize in application security assessments, network security, AI-powered code reviews, API security, and threat modeling. Our expert team provides cutting-edge security solutions tailored to your business needs, ensuring robust protection against cyber threats. Contact us today to fortify your IT infrastructure and achieve peace of mind. Trusted by businesses in Silicon Valley and beyond."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: Encrypttion
+    site_name: Sekura
     images:
       - url: '~/assets/images/encrypttion.png'
         width: 1200

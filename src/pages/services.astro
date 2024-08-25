@@ -7,7 +7,7 @@ import Testimonials from '~/components/widgets/Testimonials.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'Services',
+  title: 'Solutions',
 };
 ---
 
@@ -16,9 +16,9 @@ const metadata = {
 
   <Hero
     id="services1"
-    tagline="Services"
+    tagline="Solutions"
     title="Tailored Cybersecurity Solutions for Your Unique Security Challenges"
-    subtitle="At Encrypttion, we offer comprehensive application security assessment services designed to safeguard your applications from potential threats and vulnerabilities. At Encrypttion, we are committed to delivering top-notch application security assessment services that help you protect your critical applications, safeguard your data, and maintain the trust of your users. Contact us today to learn more about how we can help you secure your applications."
+    subtitle="At Sekura, we offer comprehensive application security assessment services designed to safeguard your applications from potential threats and vulnerabilities. At Sekura, we are committed to delivering top-notch application security assessment services that help you protect your critical applications, safeguard your data, and maintain the trust of your users. Contact us today to learn more about how we can help you secure your applications."
     actions={[{ variant: 'primary', text: 'Start exploring', href: '#services2' }]}
     image={{
       src: '~/assets/images/services.png',
@@ -37,55 +37,59 @@ const metadata = {
       {
         title: 'Application Security Assessment',
         description:
-          'While automated tools are essential for identifying common vulnerabilities, they often miss complex and context-specific security issues. Our manual application security assessment services offer a deeper, more thorough examination of your applications by experienced security professionals. Manual application security assessments are crucial for uncovering complex vulnerabilities that automated tools might miss. At Encrypttion, our team of seasoned security professionals is dedicated to providing thorough and precise assessments, helping you build and maintain secure applications. Contact us today to learn more about our manual application security assessment services and how we can help protect your applications from advanced threats. <br><a href="#services3">Read more...</a>',
+        `Elevate your application security with Sekura's AI-powered assessment solution. Our cutting-edge system combines static and dynamic analysis, leveraging transformer-based models trained on vast vulnerability databases. Our AI doesn't just find flaws; it understands them. Using advanced NLP, we analyze your code comments and documentation to uncover potential misconfigurations that traditional tools miss. Our dynamic analysis employs reinforcement learning to simulate complex user interactions, uncovering runtime vulnerabilities with unprecedented accuracy. But we don't stop at detection. Our machine learning model prioritizes vulnerabilities based on severity and exploitability, allowing you to focus on what matters most. Experience the future of application security – where AI and human expertise converge to provide unparalleled protection for your software.
+    `,
         icon: 'tabler:cloud-lock',
         
       },
       {
         title: 'API Security Assessment',
         description:
-          'In today’s interconnected digital ecosystem, Application Programming Interfaces (APIs) play a critical role in enabling communication between different applications and services. However, APIs can also be a major security risk if not properly protected. Our API security assessment services focus on identifying and mitigating vulnerabilities in your APIs to ensure they are secure from potential threats. APIs are a vital part of modern applications, and their security is paramount to protecting your data and maintaining user trust. At Encrypttion, we provide thorough API security assessment services to help you identify vulnerabilities, implement robust security measures, and ensure that your APIs are resilient against potential threats. Contact us today to learn more about how we can help secure your APIs.<br><a href="#services4">Read more...</a>',
+        `Secure your digital interfaces with Sekura's AI-driven API security assessment. Our innovative system harnesses the power of GPT-3 to generate diverse, semantically correct API requests, probing your endpoints with an intelligence that mimics real-world scenarios. Our anomaly detection algorithms, powered by cutting-edge machine learning, identify unusual API behaviors that could signal a breach. We don't just look at individual endpoints; our graph neural networks analyze your entire API ecosystem, mapping dependencies and potential attack paths with stunning clarity. Our AI even detects API-specific vulnerabilities like improper rate limiting or authentication flaws, issues that often slip through conventional testing. With Sekura, you're not just assessing your APIs; you're fortifying them with the power of artificial intelligence.
+    `,
         icon: 'tabler:circle-key',
       },
       {
         title: 'Application Threat Modeling',
-        description: `Application threat modeling is a proactive approach to identifying and mitigating potential security threats before they become vulnerabilities. Our threat modeling services involve:
-Application threat modeling is an essential component of a robust security strategy. By identifying and addressing potential threats early in the development process, you can significantly reduce the risk of security breaches and ensure your application is resilient against attacks. At Encrypttion, we help you build secure applications from the ground up, providing peace of mind and protecting your valuable assets. Contact us today to learn more about our application threat modeling services.<br><a href="#services5">Read more...</a>`,
+        description: 
+        `Revolutionize your security strategy with Sekura's AI-powered application threat modeling. Our system uses advanced natural language processing to automatically generate comprehensive data flow diagrams from your architecture documents. But that's just the beginning. We've developed a sophisticated knowledge graph populated with common threats and attack patterns, which our AI uses to identify potential vulnerabilities in your unique application structure. Our machine learning algorithms don't just find threats; they understand them, providing context-aware risk assessments. And with our generative AI, we don't just point out problems – we propose tailored mitigation strategies, giving you actionable insights to secure your application. Step into the future of threat modeling, where AI amplifies human expertise to provide unparalleled application security.
+    `,
+
         icon: 'tabler:box-model',
       },
       {
         title: 'AI-Powered Security Code Reviews',
         description:
-          'Leveraging the power of artificial intelligence and large language models (LLMs), our AI-powered security code review services provide a cutting-edge approach to identifying and mitigating security vulnerabilities in your application code. AI-powered security code reviews represent the future of application security, combining the speed and scalability of AI with the expertise of seasoned security professionals. At Encrypttion, we are committed to providing state-of-the-art security solutions that help you build and maintain secure applications. Contact us today to learn more about our AI-powered security code review services and how we can help protect your code from emerging threats.<br><a href="#services6">Read more...</a>',
+        `Leveraging the power of artificial intelligence and large language models (LLMs), our AI-powered security code review services provide a cutting-edge approach to identifying and mitigating security vulnerabilities in your application code. AI-powered security code reviews represent the future of application security, combining the speed and scalability of AI with the expertise of seasoned security professionals. At Sekura, we are committed to providing state-of-the-art security solutions that help you build and maintain secure applications. Contact us today to learn more about our AI-powered security code review services and how we can help protect your code from emerging threats.
+    `,
         icon: 'tabler:ai',
       },
       {
         title: 'Mobile Application Security Testing',
         description:
-          'With the increasing use of mobile applications, it’s crucial to ensure their security. Our mobile application security testing services cover both iOS and Android platforms, identifying vulnerabilities specific to mobile environments. We assess aspects such as data storage, communication security, and application permissions to protect your mobile users.',
+        `Secure your mobile presence with Sekura's AI-enhanced mobile application security testing. Our dynamic analysis tool uses advanced AI to navigate your app like a real user, uncovering vulnerabilities that static analysis misses. Our machine learning models dive deep into your app's binary, detecting insecure data storage patterns that could put user information at risk. We've even taught our AI to understand app permissions, flagging overprivileged applications that could be security liabilities. But our crown jewel is our intelligent fuzzing system. This AI-driven tool adapts its inputs based on your app's responses, probing for weaknesses with an intelligence that traditional tools can't match. With Sekura, you're not just testing your mobile app; you're securing it with the power of artificial intelligence.
+    `,
         icon: 'tabler:device-mobile',
       },
       {
         title: 'Penetration Testing',
         description:
-          'Our penetration testing services go beyond automated scans, involving expert security professionals who perform simulated attacks on your applications. This rigorous approach helps identify complex vulnerabilities that automated tools might miss, offering a deep understanding of your application’s security weaknesses and how to address them.',
+        `Experience the next evolution of penetration testing with Sekura's AI-driven solution. Our advanced AI doesn't just find vulnerabilities; it exploits them, chaining together complex attack scenarios that mimic sophisticated cyber threats. Using reinforcement learning, our system optimizes attack paths and payload selection in real-time, uncovering weaknesses that traditional pentesters might miss. For social engineering tests, our generative AI creates targeted phishing content that's disturbingly convincing. But we don't just unleash our AI – we combine it with human expertise. Our machine learning models analyze and categorize automated scan results, dramatically reducing false positives and allowing our human experts to focus on nuanced, high-impact vulnerabilities. With Sekura, you're not just testing your defenses; you're stress-testing them against the future of cyber threats.
+    `,
         icon: 'tabler:user-pentagon',
       },
       {
         title: 'Cloud Application Security Assessment',
         description:
-          'As applications increasingly migrate to the cloud, securing them becomes paramount. We provide specialized cloud application security assessments that focus on identifying and mitigating risks unique to cloud environments. Our experts evaluate your cloud infrastructure, configurations, and compliance with industry standards to ensure your applications are secure in the cloud.',
+        `Secure your cloud infrastructure with Sekura's AI-powered assessment solution. Our intelligent system analyzes your cloud configuration files with a level of understanding that goes beyond simple pattern matching. It detects misconfigurations and insecure settings that could leave your applications vulnerable. But we don't stop there. Our machine learning models continuously monitor your cloud resource usage and access patterns, detecting anomalies that could signal a breach. We've even taught our AI to read and understand cloud service documentation, automatically generating compliance checklists tailored to your specific setup. And with our AI-driven simulator, we can test your cloud applications against a multitude of failure scenarios, ensuring resilience in the face of real-world challenges. Step into the future of cloud security, where AI and human expertise converge to provide unparalleled protection.
+    `,
         icon: 'tabler:clock-shield',
-      },
-      {
-        title: 'Security Awareness Training',
-        description: `Empowering your development team with the knowledge and skills to write secure code is critical. We offer tailored security awareness training programs that educate your developers on common security pitfalls, secure coding practices, and the latest security trends. This proactive approach helps prevent security issues from arising in the first place.`,
-        icon: 'tabler:users-group',
       },
       {
         title: 'Network Security',
         description:
-        `At Encrypttion, we offer a comprehensive suite of network security services designed to protect your organization's IT infrastructure from potential threats. Our network security services ensure that your networks are resilient against attacks, safeguarding your data and maintaining business continuity.<br><a href="#services7">Read more...</a>`,
+        `Fortify your digital perimeter with Sekura's AI-enhanced network security solution. Our deep learning models analyze network traffic in real-time, detecting anomalies with a level of precision that rules-based systems can't match. But we don't just detect threats; we prevent them. Our reinforcement learning algorithms continuously optimize your firewall rules and network segmentation, adapting to new threats as they emerge. At the heart of our solution is our AI-driven SIEM, correlating events across multiple sources to provide a holistic view of your security posture. And with our predictive AI model, we don't just react to threats – we anticipate them, forecasting potential vulnerabilities based on historical data and current trends. Step into the future of network security, where AI acts as a tireless guardian, continuously learning and adapting to keep your network safe.
+    `,
         icon: 'tabler:network',
       },
     ]}

@@ -47,281 +47,71 @@ const metadata = {
     ]}
     image={{
       src: '~/assets/images/globe.png',
-      alt: 'Encrypttion Hero Image',
+      alt: 'Sekura Hero Image',
     }}
   >
     <Fragment slot="title">
-Experience peace of mind with Encrypttion's intelligent protection, anticipating and neutralizing threats before they emerge 
+      Welcome to Sekura: Where AI Meets Cybersecurity
 <br />
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
- At Encrypttion, artificial intelligence forms the foundation of our cybersecurity approach. Our AI-driven strategy enhances how we protect your organization's evolving attack surface. By employing advanced machine learning, we continuously analyze and address potential threats before they become issues. Our AI systems diligently monitor your applications, APIs, and infrastructure, spotting vulnerabilities that might otherwise go unnoticed. This AI-centric method allows us to offer robust, adaptive protection that keeps pace with emerging risks. While our expert team oversees operations, our specialized AI enables us to anticipate and counter cyber threats efficiently, providing you with modern, comprehensive security solutions.   </Fragment>
+
+Sekura is reimagining cybersecurity with cutting-edge artificial intelligence. We're not just protecting digital assets; we're redefining what's possible in the realm of cyber defense.
+
+Imagine a world where your applications are safeguarded by AI that thinks like a hacker but works tirelessly for you. Where your APIs are fortified by machine learning models that anticipate threats before they materialize. Where your mobile apps are secured by intelligent systems that navigate and test like human experts, but at superhuman speeds.
+
+
+Ready to step into the future of cybersecurity? Contact us today and experience the power of AI-driven protection. 
+
+
+    </Fragment>
   </Hero2>
 
-  <!-- Features Widget *************** -->
-
-  <Features
-    id="features"
-    title="Why choose Encrypttion?"
-    subtitle="Based in the San Francisco Bay Area, Encrypttion sits at the intersection of AI innovation and cybersecurity excellence. Our location in this dynamic tech hub fuels our AI-driven approach, allowing us to continuously refine our machine learning algorithms and enhance our cybersecurity solutions. We leverage the region's cutting-edge AI developments to evolve our threat detection and prevention capabilities, ensuring our clients benefit from the most advanced, AI-powered protection available. Our Bay Area roots enable us to attract top AI and cybersecurity talent, further strengthening our ability to deliver intelligent, adaptive security measures for your digital assets."
-    columns={2}
-    items={[
-      {
-        title: 'Expertise',
-        description:
-          'Our team comprises highly skilled security professionals with extensive experience in various domains of cybersecurity.',
-        icon: 'tabler:layers-union',
-      },
-      {
-        title: 'Innovation',
-        description: 'We utilize the latest technologies and methodologies to provide cutting-edge security solutions.',
-        icon: 'tabler:components',
-      },
-      {
-        title: 'Client-Centric Approach',
-        description:
-          'We work closely with our clients to understand their specific needs and deliver customized security strategies that align with their business objectives.',
-        icon: 'tabler:writing',
-      },
-      // {
-      //   title: 'Optimized landing pages and engaging blogs',
-      //   description: `Landing pages are strategically designed to captivate visitors and prompt specific actions. Additionally, the blog creation feature empowers sharing insights, engaging the audience.`,
-      //   icon: 'tabler:podium',
-      // },
-      {
-        title: 'Commitment to Excellence',
-        description: 'We are dedicated to providing exceptional service and support, ensuring our clients can operate securely and confidently.',
-        icon: 'tabler:rocket',
-      },
-      // {
-      //   title: 'SEO-optimized structure for enhanced visibility',
-      //   description: `Follows SEO best practices with clean code, semantic HTML markup, and fast loading, enhancing search engine rankings. Encrypttion's SEO structure ensures visibility to potential customers and clients.`,
-      //   icon: 'tabler:eyeglass',
-      // },
-    ]}
-  />
-
-  <!-- Content Widget **************** -->
 
   <Content
-    title="What We Do"
-    subtitle="We offer a wide range of services designed to address the complex security challenges faced by modern businesses. Our offerings include:"
-    isReversed
-    items={[
-      {
-        title: 'Application Security Assessment:',
-        description:
-          'Protecting your applications from vulnerabilities and threats with advanced testing and remediation strategies.',
-      },
-      {
-        title: 'Network Security:',
-        description: 'Ensuring the resilience of your network against internal and external attacks through rigorous penetration testing and continuous monitoring.',
-      },
-      {
-        title: 'AI-Powered Security Code Reviews:',
-        description: 'Leveraging artificial intelligence to provide in-depth, automated analysis of your code, uncovering vulnerabilities and recommending best practices for secure coding.',
-      },
-      {
-        title: 'Threat Modeling:',
-        description: 'Identifying potential threats and vulnerabilities early in the development process to enhance the security of your applications.',
-      },
-      {
-        title: 'API Security Assessment:',
-        description: 'Securing your APIs to prevent data breaches and ensure the integrity of your services.',
-      },
-    ]}
-    image={{
-      src: '~/assets/images/workspace3.png',
-      alt: 'Startup Image',
-    }}
-  >
-    <!-- <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Startup success stories: <br /><span class="text-2xl">Launching with Encrypttion</span>
-      </h3>
-    </Fragment>
+      id="features"
+      title="What We Do"
+  subtitle="Sekura is more than just powerful AI. We're a team of seasoned cybersecurity experts who understand that true security comes from the perfect fusion of artificial and human intelligence. Our AI amplifies our experts' capabilities, allowing us to provide security at a scale and depth previously thought impossible. Our AI-driven solutions cover the entire spectrum of cybersecurity:"
+  isReversed
+  items={[
+    {
+      title: 'Application Security Assessment:',
+      description: 'Application and API Security Assessments that uncover vulnerabilities traditional tools miss',
+    },
+    {
+      title: 'Penetration Testing and Network Security:',
+      description: 'Penetration Testing that simulates advanced, multi-stage attacks, Network Security that does not just detect threats, but predicts and prevents them',
+    },
+    {
+      title: 'AI-Powered Security Code Reviews:',
+      description: 'Leveraging artificial intelligence to provide in-depth, automated analysis of your code, uncovering vulnerabilities and recommending best practices for secure coding.',
+    },
+    {
+      title: 'Threat Modeling:',
+      description: 'Identifying potential threats and vulnerabilities early in the development process to enhance the security of your applications. Threat Modeling that maps out risks with unprecedented clarity',
+    },
+    {
+      title: 'Cloud and API Security Assessment:',
+      description: 'Securing your APIs to prevent data breaches and ensure the integrity of your services. Cloud Security Assessments that ensure your data is safe, no matter where it resides',
+    },
+  ]}
+  image={{
+    src: '~/assets/images/workspace3.png',
+    alt: 'Startup Image',
+  }}
+>
+  {/* <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+      Startup success stories: <br /><span class="text-2xl">Launching with Sekura</span>
+    </h3>
+  </Fragment>
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment> */}
+</Content>
 
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment> -->
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isAfterContent={true}
-    items={[
-      {
-        title: 'Who We Are:',
-        description: 'Located in the heart of the Silicon Valley, Encrypttion is a premier cybersecurity firm known for its innovative approach and deep expertise in the field. Our team of seasoned professionals combines extensive industry experience with cutting-edge technology to deliver unparalleled security services tailored to meet the unique needs of our clients.',
-      },
-      {
-        title: 'Mission:',
-        description: 'Our mission is to empower businesses by providing robust security solutions that safeguard against evolving cyber threats. We strive to be the leading provider of comprehensive security services, helping our clients achieve peace of mind knowing their critical assets are protected.',
-      },
-      {
-        title: 'Community:',
-        description: 'Being part of the San Francisco Bay Area, we actively contribute to the local tech community by participating in industry events, sharing knowledge through workshops and seminars, and collaborating with other leading tech companies. We believe in fostering a culture of innovation and continuous learning, both within our team and the broader community.',
-      },
-      // {
-      //   title: 'Get in Touch:',
-      //   description: 'Ready to enhance your cybersecurity posture? Contact us today to learn more about our services and how we can help protect your business from cyber threats. At Encrypttion, your security is our top priority.',
-      // },
-    ]}
-    image={{
-      src: '~/assets/images/community.png',
-      alt: 'SaaS Businesses Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Our Mission: <br /><span class="text-2xl">Proactive Defense</span>
-      </h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <!-- <Content
-    isReversed
-    isAfterContent={true}
-    items={[
-      {
-        title: 'Description:',
-        description: `Your portfolio is your masterpiece, and Encrypttion is your canvas. Whether you're a designer, photographer, artist, or any other creative professional, Encrypttion empowers you to showcase your work with elegance and sophistication. Tailored to highlight your creative projects, Encrypttion's templates offer a visually immersive experience that lets your portfolio shine.`,
-      },
-      {
-        title: 'Benefits:',
-        description: `Serve as a captivating backdrop to showcase your creative work, capturing attention and leaving a lasting impression. <br /> Tailor your portfolio to reflect your unique style and artistic vision. <br /> Prioritizes visuals, allowing you to present your work in high-resolution detail that draws viewers into your creations. <br /> Enables seamless navigation for effortless portfolio exploration.`,
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Portfolio Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Creative portfolios: <br /><span class="text-2xl">Highlighting your work</span>
-      </h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content> -->
-
-  <!-- Content Widget **************** -->
-
-  <!-- <Content
-    items={[
-      {
-        title: 'Description:',
-        description: `For small businesses, a well-crafted website can be a game-changer. Encrypttion empowers small businesses to not only establish a credible online presence but also convert visitors into loyal customers. The template's thoughtful design and optimization features ensure that your website doesn't just attract attention but also guides visitors through a seamless journey, ultimately leading to conversions.`,
-      },
-      {
-        title: 'Benefits:',
-        description: `Present your small business with a professional and polished website that instills confidence and trust among visitors. <br /> Strategically placed CTAs, user-friendly forms, and optimized layouts work together to drive user engagement and conversions. <br /> Ensure a smooth browsing experience, reducing bounce rates and encouraging interaction.`,
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1514621166532-aa7eb1a3a2f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-      alt: 'Small Business Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Small business growth: <br /><span class="text-2xl">Converting visitors into customers</span>
-      </h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content> -->
-
-  <!-- Pricing Widget ******************* -->
-
-  <!-- <Pricing
-    title="Flexible pricing plans"
-    prices={[
-      {
-        title: 'free',
-        subtitle: 'Access to core features and a wide range of templates',
-        price: '0',
-        period: '/ month',
-        callToAction: {
-          target: '_blank',
-          text: 'Get Started for Free',
-          href: '#',
-        },
-      },
-      {
-        title: 'pro',
-        subtitle: 'Premium templates and advanced customization',
-        price: 15,
-        period: '/ Month',
-        callToAction: {
-          target: '_blank',
-          text: 'Upgrade to Pro',
-          href: '#',
-        },
-        hasRibbon: true,
-        ribbonTitle: 'popular',
-      },
-      {
-        title: 'Enterprise',
-        subtitle: 'Tailored solutions for large-scale projects',
-        price: 45,
-        period: '/ Month',
-        callToAction: {
-          target: '_blank',
-          text: 'Unlock Enterprise Features',
-          href: '#',
-        },
-      },
-    ]}
-  /> -->
-
-  <!-- FAQs Widget ******************* -->
-
-  <!-- <FAQs
-    title="Frequently Asked Questions"
-    items={[
-      {
-        title: 'Is Encrypttion compatible with the latest versions of Astro and Tailwind CSS?',
-        description:
-          'Yes, Encrypttion is designed to be compatible with the latest versions of both Astro and Tailwind CSS. This ensures that you can harness the full capabilities of these technologies while benefiting from the features offered by Encrypttion.',
-        icon: 'tabler:chevrons-right',
-      },
-      {
-        title: 'Can I use Encrypttion for both personal and commercial projects?',
-        description: `Certainly! Encrypttion is versatile and can be used for a wide range of projects, including both personal and commercial endeavors. Whether you're building a professional portfolio, launching a startup, or creating a marketing website, Encrypttion has you covered.`,
-        icon: 'tabler:chevrons-right',
-      },
-      {
-        title: 'What level of coding knowledge is required to use Encrypttion?',
-        description:
-          'While some familiarity with HTML, CSS, and web development concepts is helpful, the user-friendly interface and customization options allow those with limited coding experience to create impressive websites. For more advanced users, Encrypttion offers extensive customization capabilities.',
-        icon: 'tabler:chevrons-right',
-      },
-      {
-        title: 'Is customer support available for Encrypttion users seeking guidance?',
-        description: `Absolutely, our dedicated customer support team is here to assist you with any questions or challenges you may encounter. Feel free to reach out to us through our support channels, and we'll be happy to provide the help you need.`,
-        icon: 'tabler:chevrons-right',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </FAQs> -->
 
   <!-- Steps2 Widget ****************** -->
 
@@ -335,7 +125,7 @@ Experience peace of mind with Encrypttion's intelligent protection, anticipating
     items={[
       {
         title: 'Email us',
-        description: 'connect@encrypttion.com',
+        description: 'connect@sekura.ai',
         icon: 'tabler:mail',
       },
       {
@@ -345,21 +135,10 @@ Experience peace of mind with Encrypttion's intelligent protection, anticipating
       },
       {
         title: 'Follow us',
-        description: 'https://www.linkedin.com/company/encrypttion',
+        description: 'https://www.linkedin.com/company/sekurai',
         icon: 'tabler:brand-linkedin',
       },
     ]}
   />
 
-  <!-- BlogLatestPost Widget **************** -->
-
-  <!-- <BlogLatestPosts
-    id="blog"
-    title="Stay informed with Encrypttion's blog"
-    information={`Explore our collection of articles, guides, and tutorials on web development, design trends, and using Encrypttion effectively for your projects.`}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </BlogLatestPosts> -->
 </Layout>
