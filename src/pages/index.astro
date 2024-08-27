@@ -1,19 +1,12 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-
 import Header from '~/components/widgets/Header.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
-import Features from '~/components/widgets/Features.astro';
-import Steps2 from '~/components/widgets/Steps2.astro';
-import Content from '~/components/widgets/Content.astro';
-import Pricing from '~/components/widgets/Pricing.astro';
-
+import ContactUs from '~/components/widgets/Contact.astro';
 import { headerData } from '~/navigation';
-import FAQs from '~/components/widgets/FAQs.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 
 const metadata = {
-  title: 'Empowering Proactive Defense',
+  title: 'AI-POWERED CYBERSECURITY'
 };
 ---
 
@@ -21,18 +14,6 @@ const metadata = {
   <Fragment slot="header">
     <Header
       {...headerData}
-      actions={[
-        // {
-        //   variant: 'secondary',
-        //   text: 'Login',
-        //   href: '#',
-        // },
-        // {
-        //   variant: 'primary',
-        //   text: 'Sign Up',
-        //   href: '#',
-        // },
-      ]}
       isSticky
     />
   </Fragment>
@@ -42,103 +23,51 @@ const metadata = {
   <Hero2
     tagline="AI-POWERED CYBERSECURITY"
     actions={[
-      { variant: 'primary',  text: 'Get Started', href: '/contact' },
-      { text: 'Learn more', href: '#features' },
+      {
+        variant: 'primary',
+        text: 'Follow us',
+        href: 'https://www.linkedin.com/company/sekuraai',
+        icon: 'tabler:brand-linkedin'
+      },
     ]}
     image={{
-      src: '~/assets/images/globe.png',
+      src: '~/assets/images/globe2.png',
       alt: 'Sekura Hero Image',
+      class: 'w-full max-w-xs mx-auto sm:max-w-md', // Adjust width and alignment
+      style: { margin: 'auto' }, // Centers the image
     }}
   >
+    <!-- Reduced Font Sizes and Adjusted Spacing -->
     <Fragment slot="title">
-      Welcome to Sekura: Where AI Meets Cybersecurity
-<br />
+      <h1 class="text-2xl sm:text-3xl font-bold text-center"> <!-- Centered Text -->
+        Welcome to Sekura: Where AI Meets Cybersecurity
+      </h1>
     </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
+      <p class="text-sm sm:text-base leading-tight mt-2 text-center">
+        Sekura is reimagining cybersecurity with cutting-edge artificial intelligence. We're not just protecting digital assets; we're redefining what's possible in the realm of cyber defense.
+        Imagine a world where your applications are safeguarded by AI that thinks like a hacker but works tirelessly for you. Where your APIs are fortified by machine learning models that anticipate threats before they materialize. Where your mobile apps are secured by intelligent systems that navigate and test like human experts, but at superhuman speeds.
+        Ready to step into the future of cybersecurity?
+      </p>
+    </Fragment>
 
-Sekura is reimagining cybersecurity with cutting-edge artificial intelligence. We're not just protecting digital assets; we're redefining what's possible in the realm of cyber defense.
-
-Imagine a world where your applications are safeguarded by AI that thinks like a hacker but works tirelessly for you. Where your APIs are fortified by machine learning models that anticipate threats before they materialize. Where your mobile apps are secured by intelligent systems that navigate and test like human experts, but at superhuman speeds.
-
-
-Ready to step into the future of cybersecurity? Contact us today and experience the power of AI-driven protection. 
-
-
+    <Fragment slot="content" class="mt-4">
+      <ContactUs
+        id="form"
+        title="Join Waitlist"
+        action="https://formspree.io/f/mrgnwpgy"
+        inputs={[
+          {
+            type: 'email',
+            name: 'email',
+            label: 'Email',
+          },
+        ]}
+        class="max-w-sm mx-auto"
+      />
     </Fragment>
   </Hero2>
 
-
-  <Content
-      id="features"
-      title="What We Do"
-  subtitle="Sekura is more than just powerful AI. We're a team of seasoned cybersecurity experts who understand that true security comes from the perfect fusion of artificial and human intelligence. Our AI amplifies our experts' capabilities, allowing us to provide security at a scale and depth previously thought impossible. Our AI-driven solutions cover the entire spectrum of cybersecurity:"
-  isReversed
-  items={[
-    {
-      title: 'Application Security Assessment:',
-      description: 'Application and API Security Assessments that uncover vulnerabilities traditional tools miss',
-    },
-    {
-      title: 'Penetration Testing and Network Security:',
-      description: 'Penetration Testing that simulates advanced, multi-stage attacks, Network Security that does not just detect threats, but predicts and prevents them',
-    },
-    {
-      title: 'AI-Powered Security Code Reviews:',
-      description: 'Leveraging artificial intelligence to provide in-depth, automated analysis of your code, uncovering vulnerabilities and recommending best practices for secure coding.',
-    },
-    {
-      title: 'Threat Modeling:',
-      description: 'Identifying potential threats and vulnerabilities early in the development process to enhance the security of your applications. Threat Modeling that maps out risks with unprecedented clarity',
-    },
-    {
-      title: 'Cloud and API Security Assessment:',
-      description: 'Securing your APIs to prevent data breaches and ensure the integrity of your services. Cloud Security Assessments that ensure your data is safe, no matter where it resides',
-    },
-  ]}
-  image={{
-    src: '~/assets/images/workspace3.png',
-    alt: 'Startup Image',
-  }}
->
-  {/* <Fragment slot="content">
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-      Startup success stories: <br /><span class="text-2xl">Launching with Sekura</span>
-    </h3>
-  </Fragment>
-  <Fragment slot="bg">
-    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-  </Fragment> */}
-</Content>
-
-
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps2
-    title="Get in Touch"
-    subtitle="Whether you already have solutions in mind or want to explore options to achieve your offensive security goals, we're ready to help."
-    callToAction={{
-      text: 'Contact us',
-      href: '/contact',
-    }}
-    items={[
-      {
-        title: 'Email us',
-        description: 'connect@sekura.ai',
-        icon: 'tabler:mail',
-      },
-      {
-        title: 'Call us',
-        description: '+1 (408) 335-4664',
-        icon: 'tabler:headset',
-      },
-      {
-        title: 'Follow us',
-        description: 'https://www.linkedin.com/company/sekuraai',
-        icon: 'tabler:brand-linkedin',
-      },
-    ]}
-  />
-
 </Layout>
+
