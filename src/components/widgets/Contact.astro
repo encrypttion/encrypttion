@@ -13,8 +13,7 @@ const {
   disclaimer,
   button,
   description,
-  action = 'https://formspree.io/f/mrgnwpgy', // Add this line
-
+  action = 'https://shiny-tooth-96ca.tikka-nagi.workers.dev',
   id,
   isDark = false,
   classes = {},
@@ -24,21 +23,64 @@ const {
 
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
   <Headline title={title} subtitle={subtitle} tagline={tagline} />
-
-  {
-    inputs && (
-      <div class="flex flex-col max-w-xl mx-auto rounded-lg backdrop-blur border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 shadow p-4 sm:p-6 lg:p-8 w-full">
-        <form action={action} method="POST"> <!-- Add this line -->
-          <FormContainer
-            inputs={inputs}
-            textarea={textarea}
-            disclaimer={disclaimer}
-            button={button}
-            description={description}
-          />
-          <input type="text" name="_gotcha" style="display:none" /> <!-- Add this line for spam protection -->
-        </form> <!-- Add this line -->
-      </div>
-    )
-  }
+  {inputs && (
+    <div class="flex flex-col max-w-xl mx-auto rounded-lg backdrop-blur border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 shadow p-4 sm:p-6 lg:p-8 w-full">
+      <form id="waitlistForm">
+        <FormContainer
+          inputs={inputs}
+          textarea={textarea}
+          disclaimer={disclaimer}
+          button={button}
+          description={description}
+        />
+        <input type="text" name="_gotcha" style="display:none" />
+      </form>
+      <div id="messageContainer" class="mt-4"></div>
+    </div>
+  )}
 </WidgetWrapper>
+
+<script define:vars={{ action }}>
+  document.getElementById('waitlistForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const messageContainer = document.getElementById('messageContainer');
+    const email = form.email.value;
+
+    try {
+      const response = await fetch(action, {
+        method: 'POST',
+        body: new FormData(form)
+      });
+
+      const result = await response.text();
+
+      if (response.ok) {
+        messageContainer.innerHTML = `
+          <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
+            <strong class="font-bold">Success!</strong>
+            <span class="block sm:inline"> Your email (${email}) has been added to our waitlist.</span>
+          </div>
+        `;
+        form.reset();
+        setTimeout(() => {
+          window.location.href = '/'; // Redirect to main page after 3 seconds
+        }, 3000);
+      } else {
+        messageContainer.innerHTML = `
+          <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+            <strong class="font-bold">Error:</strong>
+            <span class="block sm:inline"> ${result}. Please try again.</span>
+          </div>
+        `;
+      }
+    } catch (error) {
+      messageContainer.innerHTML = `
+        <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+          <strong class="font-bold">Error:</strong>
+          <span class="block sm:inline"> An unexpected error occurred. Please try again later.</span>
+        </div>
+      `;
+    }
+  });
+</script>
