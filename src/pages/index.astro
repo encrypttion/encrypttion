@@ -17,9 +17,9 @@ const metadata = {
 
   <!-- Two-Column Layout ******************* -->
   <div class="container mx-auto mt-10 px-4">
-    <div class="flex flex-col lg:flex-row">
+    <div class="flex flex-col lg:flex-row items-stretch">
       <!-- Left Column: Text Content -->
-      <div class="lg:w-1/2 w-full lg:pr-8">
+      <div class="lg:w-1/2 w-full lg:pr-8 flex flex-col justify-between">
         <!-- Hero2 Widget ******************* -->
         <Hero2
           tagline="AI-POWERED CYBERSECURITY"
@@ -32,27 +32,23 @@ const metadata = {
             },
           ]}
         >
-          <!-- Reduced Font Sizes and Adjusted Spacing -->
           <Fragment slot="title">
-            <h1 class="text-2xl sm:text-3xl font-bold text-center">
-              <!-- Centered Text -->
-            Join the Cybersecurity Revolution!  
+            <h1 class="text-3xl sm:text-4xl font-bold text-center mb-4">
+              Join the Cybersecurity Revolution!
             </h1>
           </Fragment>
 
           <Fragment slot="subtitle">
-            <p class="text-sm sm:text-base leading-tight mt-2 text-center">
-            Imagine a world where your applications are protected by an AI that not only understands current 
-            threats but anticipates future ones. A world where your security measures are as dynamic and intelligent as the threats they guard against.
-            </br>
-            Ready to Elevate Your Security?
-
-
-            </br>
+            <p class="text-lg sm:text-xl leading-relaxed mt-4 text-center max-w-2xl mx-auto">
+              Imagine a world where your applications are protected by an AI that not only understands current 
+              threats but anticipates future ones. A world where your security measures are as dynamic and intelligent as the threats they guard against.
+            </p>
+            <p class="text-xl font-semibold mt-6 text-center">
+              Ready to Elevate Your Security?
             </p>
           </Fragment>
 
-          <Fragment slot="content" class="mt-4">
+          <Fragment slot="content" class="mt-8">
             <ContactUs
               id="waitlistForm"
               title="Join Waitlist"
@@ -64,22 +60,22 @@ const metadata = {
                   label: 'Email',
                 },
               ]}
-              class="max-w-sm mx-auto"
+              class="max-w-md mx-auto"
             />
           </Fragment>
         </Hero2>
       </div>
 
       <!-- Right Column: Diagram -->
-      <div class="lg:w-1/2 w-full lg:pl-8 mt-8 lg:mt-0">
+      <div class="lg:w-1/2 w-full lg:pl-8 mt-8 lg:mt-0 flex flex-col">
         <!-- Diagram Section ******************* -->
-        <div class="relative">
-          <h1 class="text-3xl font-bold mb-4 text-center">
+        <div class="relative flex-grow flex flex-col justify-center">
+          <h2 class="text-3xl font-bold mb-8 text-center">
             Sekura AI-POWERED SSDLC Platform
-          </h1>
+          </h2>
 
           <!-- SVG Diagram will be injected here by the script -->
-          <div id="diagram-container"></div>
+          <div id="diagram-container" class="flex-grow flex items-center justify-center"></div>
 
           <!-- Phase Details -->
           <!-- Requirements Analysis -->
@@ -223,12 +219,10 @@ const metadata = {
 
       const svgNS = 'http://www.w3.org/2000/svg';
 
-      // Create SVG element with increased size
+      // Create SVG element
       const svg = document.createElementNS(svgNS, 'svg');
-      svg.setAttribute('width', '600');
-      svg.setAttribute('height', '600');
       svg.setAttribute('viewBox', '-300 -300 600 600');
-      svg.setAttribute('class', 'diagram mx-auto block');
+      svg.setAttribute('class', 'diagram w-full h-full max-w-md mx-auto');
 
       // Append SVG to diagram container
       const container = document.getElementById('diagram-container');
@@ -236,81 +230,89 @@ const metadata = {
 
       const radius = 250;
 
-      phases.forEach((phase, index) => {
-        // Calculate start and end angles
-        const totalPhases = phases.length;
-        const startAngle =
-          (index / totalPhases) * 2 * Math.PI - Math.PI / 2; // Starting from top
-        const endAngle =
-          ((index + 1) / totalPhases) * 2 * Math.PI - Math.PI / 2;
+      function drawDiagram() {
+        svg.innerHTML = ''; // Clear existing content
 
-        // Convert to Cartesian coordinates
-        const x1 = radius * Math.cos(startAngle);
-        const y1 = radius * Math.sin(startAngle);
-        const x2 = radius * Math.cos(endAngle);
-        const y2 = radius * Math.sin(endAngle);
+        phases.forEach((phase, index) => {
+          // Calculate start and end angles
+          const totalPhases = phases.length;
+          const startAngle = (index / totalPhases) * 2 * Math.PI - Math.PI / 2; // Starting from top
+          const endAngle = ((index + 1) / totalPhases) * 2 * Math.PI - Math.PI / 2;
 
-        // Determine if the arc is greater than 180 degrees
-        const largeArcFlag = endAngle - startAngle <= Math.PI ? '0' : '1';
+          // Convert to Cartesian coordinates
+          const x1 = radius * Math.cos(startAngle);
+          const y1 = radius * Math.sin(startAngle);
+          const x2 = radius * Math.cos(endAngle);
+          const y2 = radius * Math.sin(endAngle);
 
-        // Create path data
-        const d = [
-          `M 0 0`, // Move to center
-          `L ${x1} ${y1}`, // Line to start point
-          `A ${radius} ${radius} 0 ${largeArcFlag} 1 ${x2} ${y2}`, // Arc to end point
-          `Z`, // Close path
-        ].join(' ');
+          // Determine if the arc is greater than 180 degrees
+          const largeArcFlag = endAngle - startAngle <= Math.PI ? '0' : '1';
 
-        // Create path element
-        const path = document.createElementNS(svgNS, 'path');
-        path.setAttribute('d', d);
-        path.setAttribute('fill', phase.color);
-        path.setAttribute('stroke', '#333'); // Darker stroke for contrast
-        path.setAttribute('stroke-width', '1');
-        path.setAttribute('id', `${phase.id}-sector`);
+          // Create path data
+          const d = [
+            `M 0 0`, // Move to center
+            `L ${x1} ${y1}`, // Line to start point
+            `A ${radius} ${radius} 0 ${largeArcFlag} 1 ${x2} ${y2}`, // Arc to end point
+            `Z`, // Close path
+          ].join(' ');
 
-        svg.appendChild(path);
+          // Create path element
+          const path = document.createElementNS(svgNS, 'path');
+          path.setAttribute('d', d);
+          path.setAttribute('fill', phase.color);
+          path.setAttribute('stroke', '#333'); // Darker stroke for contrast
+          path.setAttribute('stroke-width', '1');
+          path.setAttribute('id', `${phase.id}-sector`);
 
-        // Add HTML labels using foreignObject
-        const textAngle = (startAngle + endAngle) / 2;
-        const textRadius = radius * 0.6;
+          svg.appendChild(path);
 
-        const tx = textRadius * Math.cos(textAngle);
-        const ty = textRadius * Math.sin(textAngle);
+          // Add HTML labels using foreignObject
+          const textAngle = (startAngle + endAngle) / 2;
+          const textRadius = radius * 0.6;
 
-        const foreignObject = document.createElementNS(svgNS, 'foreignObject');
-        foreignObject.setAttribute('x', tx - 50);
-        foreignObject.setAttribute('y', ty - 10);
-        foreignObject.setAttribute('width', 100);
-        foreignObject.setAttribute('height', 20);
-        foreignObject.setAttribute(
-          'transform',
-          `rotate(${(textAngle * 180) / Math.PI}, ${tx}, ${ty})`
-        );
+          const tx = textRadius * Math.cos(textAngle);
+          const ty = textRadius * Math.sin(textAngle);
 
-        const div = document.createElement('div');
-        div.setAttribute('xmlns', 'http://www.w3.org/1999/xhtml');
-        div.setAttribute(
-          'style',
-          'display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: bold;'
-        );
+          const foreignObject = document.createElementNS(svgNS, 'foreignObject');
+          foreignObject.setAttribute('x', tx - 50);
+          foreignObject.setAttribute('y', ty - 10);
+          foreignObject.setAttribute('width', 100);
+          foreignObject.setAttribute('height', 20);
+          foreignObject.setAttribute(
+            'transform',
+            `rotate(${(textAngle * 180) / Math.PI}, ${tx}, ${ty})`
+          );
 
-        div.innerHTML = `<i class="${phase.icon}" style="margin-right: 5px;"></i>${phase.name}`;
+          const div = document.createElement('div');
+          div.setAttribute('xmlns', 'http://www.w3.org/1999/xhtml');
+          div.setAttribute(
+            'style',
+            'display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: bold; text-align: center;'
+          );
 
-        foreignObject.appendChild(div);
-        svg.appendChild(foreignObject);
+          div.innerHTML = `<i class="${phase.icon}" style="margin-right: 5px;"></i>${phase.name}`;
 
-        // Event listeners for interactivity
-        path.addEventListener('click', function (event) {
-          event.stopPropagation();
-          // Hide all phase details
-          document.querySelectorAll('.phase').forEach(function (el) {
-            el.classList.add('hidden');
+          foreignObject.appendChild(div);
+          svg.appendChild(foreignObject);
+
+          // Event listeners for interactivity
+          path.addEventListener('click', function (event) {
+            event.stopPropagation();
+            // Hide all phase details
+            document.querySelectorAll('.phase').forEach(function (el) {
+              el.classList.add('hidden');
+            });
+            // Show current phase details
+            document.getElementById(phase.id).classList.remove('hidden');
           });
-          // Show current phase details
-          document.getElementById(phase.id).classList.remove('hidden');
         });
-      });
+      }
+
+      // Initial draw
+      drawDiagram();
+
+      // Redraw on window resize
+      window.addEventListener('resize', drawDiagram);
 
       // Hide phase details when clicking outside
       document.addEventListener('click', function (event) {
