@@ -6,68 +6,322 @@ import ContactUs from '~/components/widgets/Contact.astro';
 import { headerData } from '~/navigation';
 
 const metadata = {
-  title: 'AI-POWERED CYBERSECURITY'
+  title: 'AI-POWERED CYBERSECURITY',
 };
 ---
 
 <Layout metadata={metadata}>
   <Fragment slot="header">
-    <Header
-      {...headerData}
-      isSticky
+    <Header {...headerData} isSticky />
+  </Fragment>
+
+  <!-- Two-Column Layout ******************* -->
+  <div class="container mx-auto mt-10 px-4">
+    <div class="flex flex-col lg:flex-row">
+      <!-- Left Column: Text Content -->
+      <div class="lg:w-1/2 w-full lg:pr-8">
+        <!-- Hero2 Widget ******************* -->
+        <Hero2
+          tagline="AI-POWERED CYBERSECURITY"
+          actions={[
+            {
+              variant: 'primary',
+              text: 'Follow us',
+              href: 'https://www.linkedin.com/company/sekuraai',
+              icon: 'tabler:brand-linkedin',
+            },
+          ]}
+        >
+          <!-- Reduced Font Sizes and Adjusted Spacing -->
+          <Fragment slot="title">
+            <h1 class="text-2xl sm:text-3xl font-bold text-center">
+              <!-- Centered Text -->
+            Join the Cybersecurity Revolution!  
+            </h1>
+          </Fragment>
+
+          <Fragment slot="subtitle">
+            <p class="text-sm sm:text-base leading-tight mt-2 text-center">
+            Imagine a world where your applications are protected by an AI that not only understands current 
+            threats but anticipates future ones. A world where your security measures are as dynamic and intelligent as the threats they guard against.
+            </br>
+            Ready to Elevate Your Security?
+
+
+            </br>
+            </p>
+          </Fragment>
+
+          <Fragment slot="content" class="mt-4">
+            <ContactUs
+              id="waitlistForm"
+              title="Join Waitlist"
+              action="https://shiny-tooth-96ca.tikka-nagi.workers.dev/"
+              inputs={[
+                {
+                  type: 'email',
+                  name: 'email',
+                  label: 'Email',
+                },
+              ]}
+              class="max-w-sm mx-auto"
+            />
+          </Fragment>
+        </Hero2>
+      </div>
+
+      <!-- Right Column: Diagram -->
+      <div class="lg:w-1/2 w-full lg:pl-8 mt-8 lg:mt-0">
+        <!-- Diagram Section ******************* -->
+        <div class="relative">
+          <h1 class="text-3xl font-bold mb-4 text-center">
+            Sekura AI-POWERED SSDLC Platform
+          </h1>
+
+          <!-- SVG Diagram will be injected here by the script -->
+          <div id="diagram-container"></div>
+
+          <!-- Phase Details -->
+          <!-- Requirements Analysis -->
+          <div
+            class="phase absolute top-36 left-1/2 transform -translate-x-1/2 bg-white bg-opacity-95 p-5 border-2 border-black z-10 w-4/5 shadow-xl hidden"
+            id="requirements-analysis"
+          >
+            <h2 class="text-2xl font-semibold">Requirements Analysis</h2>
+            <div class="component bg-gray-100 p-2 border border-gray-300 mt-2">
+              Comprehensive Compliance Management
+            </div>
+          </div>
+
+          <!-- Design -->
+          <div
+            class="phase absolute top-36 left-1/2 transform -translate-x-1/2 bg-white bg-opacity-95 p-5 border-2 border-black z-10 w-4/5 shadow-xl hidden"
+            id="design"
+          >
+            <h2 class="text-2xl font-semibold">Design</h2>
+            <div class="component bg-gray-100 p-2 border border-gray-300 mt-2">
+              Predictive Threat Modeling
+            </div>
+          </div>
+
+          <!-- Implementation (Coding) -->
+          <div
+            class="phase absolute top-36 left-1/2 transform -translate-x-1/2 bg-white bg-opacity-95 p-5 border-2 border-black z-10 w-4/5 shadow-xl hidden"
+            id="implementation"
+          >
+            <h2 class="text-2xl font-semibold">Implementation (Coding)</h2>
+            <div class="component bg-gray-100 p-2 border border-gray-300 mt-2">
+              AI-Driven Code Intelligence
+            </div>
+            <div class="component bg-gray-100 p-2 border border-gray-300 mt-2">
+              IDE Plugins and Extensions
+            </div>
+          </div>
+
+          <!-- Testing -->
+          <div
+            class="phase absolute top-36 left-1/2 transform -translate-x-1/2 bg-white bg-opacity-95 p-5 border-2 border-black z-10 w-4/5 shadow-xl hidden"
+            id="testing"
+          >
+            <h2 class="text-2xl font-semibold">Testing</h2>
+            <div class="component bg-gray-100 p-2 border border-gray-300 mt-2">
+              Advanced API Security
+            </div>
+            <div class="component bg-gray-100 p-2 border border-gray-300 mt-2">
+              Seamless CI/CD Pipeline Integration
+            </div>
+          </div>
+
+          <!-- Deployment -->
+          <div
+            class="phase absolute top-36 left-1/2 transform -translate-x-1/2 bg-white bg-opacity-95 p-5 border-2 border-black z-10 w-4/5 shadow-xl hidden"
+            id="deployment"
+          >
+            <h2 class="text-2xl font-semibold">Deployment</h2>
+            <div class="component bg-gray-100 p-2 border border-gray-300 mt-2">
+              Integrated SDLC Security
+            </div>
+            <div class="component bg-gray-100 p-2 border border-gray-300 mt-2">
+              Natural Language Query Interface
+            </div>
+          </div>
+
+          <!-- Maintenance -->
+          <div
+            class="phase absolute top-36 left-1/2 transform -translate-x-1/2 bg-white bg-opacity-95 p-5 border-2 border-black z-10 w-4/5 shadow-xl hidden"
+            id="maintenance"
+          >
+            <h2 class="text-2xl font-semibold">Maintenance</h2>
+            <div class="component bg-gray-100 p-2 border border-gray-300 mt-2">
+              Predictive Threat Modeling
+            </div>
+            <div class="component bg-gray-100 p-2 border border-gray-300 mt-2">
+              Advanced API Security
+            </div>
+            <div class="component bg-gray-100 p-2 border border-gray-300 mt-2">
+              Natural Language Query Interface
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Include Font Awesome -->
+  <Fragment slot="head">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-p6YbUXrN3dP5e0YpP/1+hZBjVxkBl16eIPhh+KMVesZJzO4fg+bVZDeHUMa6L9BkgZPWsoP0ZBfY0PHwz6+xog=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
   </Fragment>
 
-  <!-- Hero2 Widget ******************* -->
+  <!-- JavaScript for the Diagram -->
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Define the phases with vibrant colors and Font Awesome icons
+      const phases = [
+        {
+          id: 'requirements-analysis',
+          name: 'Requirements Analysis',
+          color: '#FF6F61', // Vibrant coral
+          icon: 'fas fa-search',
+        },
+        {
+          id: 'design',
+          name: 'Design',
+          color: '#6B5B95', // Vibrant purple
+          icon: 'fas fa-pencil-alt',
+        },
+        {
+          id: 'implementation',
+          name: 'Implementation (Coding)',
+          color: '#88B04B', // Vibrant green
+          icon: 'fas fa-code',
+        },
+        {
+          id: 'testing',
+          name: 'Testing',
+          color: '#F7CAC9', // Light pink
+          icon: 'fas fa-cogs',
+        },
+        {
+          id: 'deployment',
+          name: 'Deployment',
+          color: '#92A8D1', // Vibrant blue
+          icon: 'fas fa-upload',
+        },
+        {
+          id: 'maintenance',
+          name: 'Maintenance',
+          color: '#F7786B', // Vibrant red
+          icon: 'fas fa-wrench',
+        },
+      ];
 
-  <Hero2
-    tagline="AI-POWERED CYBERSECURITY"
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Follow us',
-        href: 'https://www.linkedin.com/company/sekuraai',
-        icon: 'tabler:brand-linkedin'
-      },
-    ]}
-    image={{
-      src: '~/assets/images/globe2.png',
-      alt: 'Sekura Hero Image',
-      class: 'w-full max-w-xs mx-auto sm:max-w-md', // Adjust width and alignment
-      style: { margin: 'auto' }, // Centers the image
-    }}
-  >
-    <!-- Reduced Font Sizes and Adjusted Spacing -->
-    <Fragment slot="title">
-      <h1 class="text-2xl sm:text-3xl font-bold text-center"> <!-- Centered Text -->
-        Welcome to Sekura: Where AI Meets Cybersecurity
-      </h1>
-    </Fragment>
+      const svgNS = 'http://www.w3.org/2000/svg';
 
-    <Fragment slot="subtitle">
-      <p class="text-sm sm:text-base leading-tight mt-2 text-center">
-        Sekura is reimagining cybersecurity with cutting-edge artificial intelligence. We're not just protecting digital assets; we're redefining what's possible in the realm of cyber defense.
-        Imagine a world where your applications are safeguarded by AI that thinks like a hacker but works tirelessly for you. Where your APIs are fortified by machine learning models that anticipate threats before they materialize. Where your mobile apps are secured by intelligent systems that navigate and test like human experts, but at superhuman speeds.
-        Ready to step into the future of cybersecurity?
-      </p>
-    </Fragment>
+      // Create SVG element with increased size
+      const svg = document.createElementNS(svgNS, 'svg');
+      svg.setAttribute('width', '600');
+      svg.setAttribute('height', '600');
+      svg.setAttribute('viewBox', '-300 -300 600 600');
+      svg.setAttribute('class', 'diagram mx-auto block');
 
-    <Fragment slot="content" class="mt-4">
-      <ContactUs
-        id="waitlistForm"
-        title="Join Waitlist"
-        action="https://shiny-tooth-96ca.tikka-nagi.workers.dev/"
-        inputs={[
-          {
-            type: 'email',
-            name: 'email',
-            label: 'Email',
-          },
-        ]}
-        class="max-w-sm mx-auto"
-      />
-    </Fragment>
-  </Hero2>
+      // Append SVG to diagram container
+      const container = document.getElementById('diagram-container');
+      container.appendChild(svg);
 
+      const radius = 250;
+
+      phases.forEach((phase, index) => {
+        // Calculate start and end angles
+        const totalPhases = phases.length;
+        const startAngle =
+          (index / totalPhases) * 2 * Math.PI - Math.PI / 2; // Starting from top
+        const endAngle =
+          ((index + 1) / totalPhases) * 2 * Math.PI - Math.PI / 2;
+
+        // Convert to Cartesian coordinates
+        const x1 = radius * Math.cos(startAngle);
+        const y1 = radius * Math.sin(startAngle);
+        const x2 = radius * Math.cos(endAngle);
+        const y2 = radius * Math.sin(endAngle);
+
+        // Determine if the arc is greater than 180 degrees
+        const largeArcFlag = endAngle - startAngle <= Math.PI ? '0' : '1';
+
+        // Create path data
+        const d = [
+          `M 0 0`, // Move to center
+          `L ${x1} ${y1}`, // Line to start point
+          `A ${radius} ${radius} 0 ${largeArcFlag} 1 ${x2} ${y2}`, // Arc to end point
+          `Z`, // Close path
+        ].join(' ');
+
+        // Create path element
+        const path = document.createElementNS(svgNS, 'path');
+        path.setAttribute('d', d);
+        path.setAttribute('fill', phase.color);
+        path.setAttribute('stroke', '#333'); // Darker stroke for contrast
+        path.setAttribute('stroke-width', '1');
+        path.setAttribute('id', `${phase.id}-sector`);
+
+        svg.appendChild(path);
+
+        // Add HTML labels using foreignObject
+        const textAngle = (startAngle + endAngle) / 2;
+        const textRadius = radius * 0.6;
+
+        const tx = textRadius * Math.cos(textAngle);
+        const ty = textRadius * Math.sin(textAngle);
+
+        const foreignObject = document.createElementNS(svgNS, 'foreignObject');
+        foreignObject.setAttribute('x', tx - 50);
+        foreignObject.setAttribute('y', ty - 10);
+        foreignObject.setAttribute('width', 100);
+        foreignObject.setAttribute('height', 20);
+        foreignObject.setAttribute(
+          'transform',
+          `rotate(${(textAngle * 180) / Math.PI}, ${tx}, ${ty})`
+        );
+
+        const div = document.createElement('div');
+        div.setAttribute('xmlns', 'http://www.w3.org/1999/xhtml');
+        div.setAttribute(
+          'style',
+          'display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: bold;'
+        );
+
+        div.innerHTML = `<i class="${phase.icon}" style="margin-right: 5px;"></i>${phase.name}`;
+
+        foreignObject.appendChild(div);
+        svg.appendChild(foreignObject);
+
+        // Event listeners for interactivity
+        path.addEventListener('click', function (event) {
+          event.stopPropagation();
+          // Hide all phase details
+          document.querySelectorAll('.phase').forEach(function (el) {
+            el.classList.add('hidden');
+          });
+          // Show current phase details
+          document.getElementById(phase.id).classList.remove('hidden');
+        });
+      });
+
+      // Hide phase details when clicking outside
+      document.addEventListener('click', function (event) {
+        if (!event.target.closest('path')) {
+          // Hide all phases
+          document.querySelectorAll('.phase').forEach(function (el) {
+            el.classList.add('hidden');
+          });
+        }
+      });
+    });
+  </script>
 </Layout>
 
