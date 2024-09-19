@@ -1,0 +1,62 @@
+/* style.css */
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 1200px; /* Increased width */
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+.diagram {
+  margin: 0 auto;
+  display: block;
+}
+
+.phase {
+  display: none;
+  position: absolute;
+  top: 150px; /* Adjusted for larger circle */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.95); /* Changed pop-up color to white with slight transparency */
+  padding: 20px;
+  border: 2px solid #000; /* Made border more prominent */
+  z-index: 10;
+  width: 80%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
+}
+
+.phase h2 {
+  margin-top: 0;
+}
+
+.phase .component {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #f1f1f1; /* Slightly darker background for components */
+  border: 1px solid #ccc;
+}
+
+.diagram text {
+  font-size: 28px; /* Increased font size for readability */
+  font-weight: bold;
+  pointer-events: none;
+}
+
+.diagram path {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.diagram path:hover {
+  transform: scale(1.05);
+}
+
+.diagram path:hover {
+  fill-opacity: 0.9;
+  stroke: #000;
+}``

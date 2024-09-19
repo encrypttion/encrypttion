@@ -66,43 +66,6 @@ const phases = [
       <!-- Left Column: Text Content -->
       <div class="lg:w-3/5 w-full lg:pr-8 flex flex-col justify-between">
         <!-- Hero2 Widget ******************* -->
-        <Hero2
-          tagline="Join the Cybersecurity Revolution!"
-          actions={[
-            {
-              variant: 'primary',
-              text: 'Follow us',
-              href: 'https://www.linkedin.com/company/sekuraai',
-              icon: 'tabler:brand-linkedin',
-            },
-          ]}
-        >
-
-          <Fragment slot="subtitle">
-            <p class="text-lg sm:text-xl leading-relaxed mt-4 max-w-2xl mx-auto">
-              Imagine a world where your applications are protected by an AI that not only understands current 
-              threats but anticipates future ones. A world where your security measures are as dynamic and intelligent as the threats they guard against.
-            </p>
-            <p class="text-xl font-semibold mt-6 text-center">
-              Ready to Elevate Your Security?
-            </p>
-          </Fragment>
-
-          <Fragment slot="content" class="mt-8">
-            <ContactUs
-              id="waitlistForm"
-              title="Join Waitlist"
-              action="https://shiny-tooth-96ca.tikka-nagi.workers.dev/"
-              inputs={[
-                {
-                  type: 'email',
-                  name: 'email',
-                  label: 'Email',
-                },
-              ]}
-              class="max-w-md mx-auto"
-            />
-          </Fragment>
         </Hero2>
       </div>
 
@@ -114,6 +77,10 @@ const phases = [
             Sekura AI-POWERED SSDLC Platform
           </h2>
 
+            <p class="text-lg sm:text-xl leading-relaxed mt-4 max-w-2xl mx-auto">
+              Imagine a world where your applications are protected by an AI that not only understands current 
+              threats but anticipates future ones. A world where your security measures are as dynamic and intelligent as the threats they guard against.
+            </p>
           <!-- SVG Diagram will be injected here by the script -->
           <div id="diagram-container" class="flex-grow flex items-center " style="width:1200px; height: 550px;"></div>
 
@@ -134,7 +101,40 @@ const phases = [
             </div>
           ))}
         </div>
-      </div>
+         <Hero2
+          tagline="Join the Cybersecurity Revolution!"
+          actions={[
+            {
+              variant: 'primary',
+              text: 'Follow us',
+              href: 'https://www.linkedin.com/company/sekuraai',
+              icon: 'tabler:brand-linkedin',
+            },
+          ]}
+        >
+
+          <Fragment slot="subtitle">
+            <p class="text-xl font-semibold mt-6 text-center">
+              Ready to Elevate Your Security?
+            </p>
+          </Fragment>
+
+          <Fragment slot="content" class="mt-8">
+            <ContactUs
+              id="waitlistForm"
+              title="Join Waitlist"
+              action="https://shiny-tooth-96ca.tikka-nagi.workers.dev/"
+              inputs={[
+                {
+                  type: 'email',
+                  name: 'email',
+                  label: 'Email',
+                },
+              ]}
+              class="max-w-md mx-auto"
+            />
+          </Fragment>
+     </div>
     </div>
   </div>
 
