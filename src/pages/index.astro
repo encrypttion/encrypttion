@@ -75,89 +75,24 @@ const metadata = {
           </h2>
 
           <!-- SVG Diagram will be injected here by the script -->
-          <div id="diagram-container" class="flex-grow flex items-center justify-center"></div>
+          <div id="diagram-container" class="flex-grow flex items-center justify-center" style="height: 600px;"></div>
 
           <!-- Phase Details -->
-          <!-- Requirements Analysis -->
-          <div
-            class="phase absolute top-36 left-1/2 transform -translate-x-1/2 bg-white bg-opacity-95 p-5 border-2 border-black z-10 w-4/5 shadow-xl hidden"
-            id="requirements-analysis"
-          >
-            <h2 class="text-2xl font-semibold">Requirements Analysis</h2>
-            <div class="component bg-gray-100 p-2 border border-gray-300 mt-2">
-              Comprehensive Compliance Management
+          {phases.map((phase) => (
+            <div
+              class="phase absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-6 border-2 border-gray-300 rounded-lg z-10 w-4/5 max-w-2xl shadow-2xl hidden"
+              id={phase.id}
+            >
+              <h2 class="text-3xl font-bold mb-4 text-gray-800">{phase.name}</h2>
+              <div class="space-y-3">
+                {phase.components.map((component) => (
+                  <div class="component bg-gray-50 p-3 rounded-md border border-gray-200">
+                    <p class="text-lg text-gray-700">{component}</p>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-
-          <!-- Design -->
-          <div
-            class="phase absolute top-36 left-1/2 transform -translate-x-1/2 bg-white bg-opacity-95 p-5 border-2 border-black z-10 w-4/5 shadow-xl hidden"
-            id="design"
-          >
-            <h2 class="text-2xl font-semibold">Design</h2>
-            <div class="component bg-gray-100 p-2 border border-gray-300 mt-2">
-              Predictive Threat Modeling
-            </div>
-          </div>
-
-          <!-- Implementation (Coding) -->
-          <div
-            class="phase absolute top-36 left-1/2 transform -translate-x-1/2 bg-white bg-opacity-95 p-5 border-2 border-black z-10 w-4/5 shadow-xl hidden"
-            id="implementation"
-          >
-            <h2 class="text-2xl font-semibold">Implementation (Coding)</h2>
-            <div class="component bg-gray-100 p-2 border border-gray-300 mt-2">
-              AI-Driven Code Intelligence
-            </div>
-            <div class="component bg-gray-100 p-2 border border-gray-300 mt-2">
-              IDE Plugins and Extensions
-            </div>
-          </div>
-
-          <!-- Testing -->
-          <div
-            class="phase absolute top-36 left-1/2 transform -translate-x-1/2 bg-white bg-opacity-95 p-5 border-2 border-black z-10 w-4/5 shadow-xl hidden"
-            id="testing"
-          >
-            <h2 class="text-2xl font-semibold">Testing</h2>
-            <div class="component bg-gray-100 p-2 border border-gray-300 mt-2">
-              Advanced API Security
-            </div>
-            <div class="component bg-gray-100 p-2 border border-gray-300 mt-2">
-              Seamless CI/CD Pipeline Integration
-            </div>
-          </div>
-
-          <!-- Deployment -->
-          <div
-            class="phase absolute top-36 left-1/2 transform -translate-x-1/2 bg-white bg-opacity-95 p-5 border-2 border-black z-10 w-4/5 shadow-xl hidden"
-            id="deployment"
-          >
-            <h2 class="text-2xl font-semibold">Deployment</h2>
-            <div class="component bg-gray-100 p-2 border border-gray-300 mt-2">
-              Integrated SDLC Security
-            </div>
-            <div class="component bg-gray-100 p-2 border border-gray-300 mt-2">
-              Natural Language Query Interface
-            </div>
-          </div>
-
-          <!-- Maintenance -->
-          <div
-            class="phase absolute top-36 left-1/2 transform -translate-x-1/2 bg-white bg-opacity-95 p-5 border-2 border-black z-10 w-4/5 shadow-xl hidden"
-            id="maintenance"
-          >
-            <h2 class="text-2xl font-semibold">Maintenance</h2>
-            <div class="component bg-gray-100 p-2 border border-gray-300 mt-2">
-              Predictive Threat Modeling
-            </div>
-            <div class="component bg-gray-100 p-2 border border-gray-300 mt-2">
-              Advanced API Security
-            </div>
-            <div class="component bg-gray-100 p-2 border border-gray-300 mt-2">
-              Natural Language Query Interface
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
@@ -177,43 +112,49 @@ const metadata = {
   <!-- JavaScript for the Diagram -->
   <script is:inline>
     document.addEventListener('DOMContentLoaded', function () {
-      // Define the phases with vibrant colors and Font Awesome icons
+      // Define the phases with vibrant colors, Font Awesome icons, and components
       const phases = [
         {
           id: 'requirements-analysis',
           name: 'Requirements Analysis',
           color: '#FF6F61', // Vibrant coral
           icon: 'fas fa-search',
+          components: ['Comprehensive Compliance Management'],
         },
         {
           id: 'design',
           name: 'Design',
           color: '#6B5B95', // Vibrant purple
           icon: 'fas fa-pencil-alt',
+          components: ['Predictive Threat Modeling'],
         },
         {
           id: 'implementation',
           name: 'Implementation (Coding)',
           color: '#88B04B', // Vibrant green
           icon: 'fas fa-code',
+          components: ['AI-Driven Code Intelligence', 'IDE Plugins and Extensions'],
         },
         {
           id: 'testing',
           name: 'Testing',
           color: '#F7CAC9', // Light pink
           icon: 'fas fa-cogs',
+          components: ['Advanced API Security', 'Seamless CI/CD Pipeline Integration'],
         },
         {
           id: 'deployment',
           name: 'Deployment',
           color: '#92A8D1', // Vibrant blue
           icon: 'fas fa-upload',
+          components: ['Integrated SDLC Security', 'Natural Language Query Interface'],
         },
         {
           id: 'maintenance',
           name: 'Maintenance',
           color: '#F7786B', // Vibrant red
           icon: 'fas fa-wrench',
+          components: ['Predictive Threat Modeling', 'Advanced API Security', 'Natural Language Query Interface'],
         },
       ];
 
@@ -221,14 +162,14 @@ const metadata = {
 
       // Create SVG element
       const svg = document.createElementNS(svgNS, 'svg');
-      svg.setAttribute('viewBox', '-300 -300 600 600');
-      svg.setAttribute('class', 'diagram w-full h-full max-w-md mx-auto');
+      svg.setAttribute('viewBox', '-400 -400 800 800');
+      svg.setAttribute('class', 'diagram w-full h-full mx-auto');
 
       // Append SVG to diagram container
       const container = document.getElementById('diagram-container');
       container.appendChild(svg);
 
-      const radius = 250;
+      const radius = 350;
 
       function drawDiagram() {
         svg.innerHTML = ''; // Clear existing content
