@@ -73,7 +73,7 @@ const phases = [
           threats but anticipates future ones. A world where your security measures are as dynamic and intelligent as the threats they guard against.
         </p>
         <!-- SVG Diagram will be injected here by the script -->
-        <div id="diagram-container" class="flex-grow flex items-center justify-center" style="height: 600px;"></div>
+        <div id="diagram-container" class="flex-grow flex items-center justify-center" style="width: 1200px; height: 600px;"></div>
 
         <!-- Phase Details -->
         {phases.map((phase) => (
@@ -222,7 +222,7 @@ const phases = [
           div.setAttribute('xmlns', 'http://www.w3.org/1999/xhtml');
           div.setAttribute(
             'style',
-            'display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: bold; text-align: center; pointer-events: none;'
+            'display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; text-align: center; pointer-events: none;'
           );
 
           div.innerHTML = `<i class="${phase.icon}" style="margin-right: 5px;"></i>${phase.name}`;
