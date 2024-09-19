@@ -115,7 +115,7 @@ const phases = [
           </h2>
 
           <!-- SVG Diagram will be injected here by the script -->
-          <div id="diagram-container" class="flex-grow flex items-center justify-center" style="height: 550px;"></div>
+          <div id="diagram-container" class="flex-grow flex items-center " style="width:1200px; height: 550px;"></div>
 
           <!-- Phase Details -->
           {phases.map((phase) => (
@@ -156,14 +156,18 @@ const phases = [
 
       // Create SVG element
       const svg = document.createElementNS(svgNS, 'svg');
-      svg.setAttribute('viewBox', '-400 -400 800 800');
-      svg.setAttribute('class', 'diagram w-full h-full mx-auto');
+      svg.setAttribute('width', '1000'); // Increased width
+      svg.setAttribute('height', '1000'); // Increased height
+      svg.setAttribute('viewBox', '-700 -700 1400 1400'); // Adjusted viewBox
+      svg.setAttribute('class', 'diagram');
+      //svg.setAttribute('viewBox', '-400 -400 800 800');
+      //svg.setAttribute('class', 'diagram w-full h-full mx-auto');
 
       // Append SVG to diagram container
       const container = document.getElementById('diagram-container');
       container.appendChild(svg);
 
-      const radius = 350;
+      const radius = 500;
 
       function drawDiagram() {
         svg.innerHTML = ''; // Clear existing content
