@@ -160,6 +160,7 @@ const phases = [
       svg.setAttribute('height', '1000'); // Increased height
       svg.setAttribute('viewBox', '-700 -700 1400 1400'); // Adjusted viewBox
       svg.setAttribute('class', 'diagram');
+      svg.style.cssText = 'margin: 0 auto; display: block;';
       //svg.setAttribute('viewBox', '-400 -400 800 800');
       //svg.setAttribute('class', 'diagram w-full h-full mx-auto');
 
@@ -202,6 +203,8 @@ const phases = [
           path.setAttribute('stroke', '#333'); // Darker stroke for contrast
           path.setAttribute('stroke-width', '1');
           path.setAttribute('id', `${phase.id}-sector`);
+          path.setAttribute('class', 'diagram-path');
+          path.style.cssText = 'cursor: pointer; transition: transform 0.2s;';
 
           svg.appendChild(path);
 
@@ -226,7 +229,7 @@ const phases = [
           div.setAttribute('xmlns', 'http://www.w3.org/1999/xhtml');
           div.setAttribute(
             'style',
-            'display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: bold; text-align: center;'
+            'display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: bold; text-align: center; pointer-events: none;'
           );
 
           div.innerHTML = `<i class="${phase.icon}" style="margin-right: 5px;"></i>${phase.name}`;
@@ -243,6 +246,18 @@ const phases = [
             });
             // Show current phase details
             document.getElementById(phase.id).classList.remove('hidden');
+          });
+
+          path.addEventListener('mouseover', function() {
+            this.style.transform = 'scale(1.05)';
+            this.style.fillOpacity = '0.9';
+            this.style.stroke = '#000';
+          });
+
+          path.addEventListener('mouseout', function() {
+            this.style.transform = 'scale(1)';
+            this.style.fillOpacity = '1';
+            this.style.stroke = '#333';
           });
         });
       }
