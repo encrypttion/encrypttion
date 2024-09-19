@@ -8,6 +8,51 @@ import { headerData } from '~/navigation';
 const metadata = {
   title: 'AI-POWERED CYBERSECURITY',
 };
+
+const phases = [
+  {
+    id: 'requirements-analysis',
+    name: 'Requirements Analysis',
+    color: '#FF6F61', // Vibrant coral
+    icon: 'fas fa-search',
+    components: ['Comprehensive Compliance Management'],
+  },
+  {
+    id: 'design',
+    name: 'Design',
+    color: '#6B5B95', // Vibrant purple
+    icon: 'fas fa-pencil-alt',
+    components: ['Predictive Threat Modeling'],
+  },
+  {
+    id: 'implementation',
+    name: 'Implementation (Coding)',
+    color: '#88B04B', // Vibrant green
+    icon: 'fas fa-code',
+    components: ['AI-Driven Code Intelligence', 'IDE Plugins and Extensions'],
+  },
+  {
+    id: 'testing',
+    name: 'Testing',
+    color: '#F7CAC9', // Light pink
+    icon: 'fas fa-cogs',
+    components: ['Advanced API Security', 'Seamless CI/CD Pipeline Integration'],
+  },
+  {
+    id: 'deployment',
+    name: 'Deployment',
+    color: '#92A8D1', // Vibrant blue
+    icon: 'fas fa-upload',
+    components: ['Integrated SDLC Security', 'Natural Language Query Interface'],
+  },
+  {
+    id: 'maintenance',
+    name: 'Maintenance',
+    color: '#F7786B', // Vibrant red
+    icon: 'fas fa-wrench',
+    components: ['Predictive Threat Modeling', 'Advanced API Security', 'Natural Language Query Interface'],
+  },
+];
 ---
 
 <Layout metadata={metadata}>
@@ -110,54 +155,8 @@ const metadata = {
   </Fragment>
 
   <!-- JavaScript for the Diagram -->
-  <script is:inline>
+  <script is:inline define:vars={{ phases }}>
     document.addEventListener('DOMContentLoaded', function () {
-      // Define the phases with vibrant colors, Font Awesome icons, and components
-      const phases = [
-        {
-          id: 'requirements-analysis',
-          name: 'Requirements Analysis',
-          color: '#FF6F61', // Vibrant coral
-          icon: 'fas fa-search',
-          components: ['Comprehensive Compliance Management'],
-        },
-        {
-          id: 'design',
-          name: 'Design',
-          color: '#6B5B95', // Vibrant purple
-          icon: 'fas fa-pencil-alt',
-          components: ['Predictive Threat Modeling'],
-        },
-        {
-          id: 'implementation',
-          name: 'Implementation (Coding)',
-          color: '#88B04B', // Vibrant green
-          icon: 'fas fa-code',
-          components: ['AI-Driven Code Intelligence', 'IDE Plugins and Extensions'],
-        },
-        {
-          id: 'testing',
-          name: 'Testing',
-          color: '#F7CAC9', // Light pink
-          icon: 'fas fa-cogs',
-          components: ['Advanced API Security', 'Seamless CI/CD Pipeline Integration'],
-        },
-        {
-          id: 'deployment',
-          name: 'Deployment',
-          color: '#92A8D1', // Vibrant blue
-          icon: 'fas fa-upload',
-          components: ['Integrated SDLC Security', 'Natural Language Query Interface'],
-        },
-        {
-          id: 'maintenance',
-          name: 'Maintenance',
-          color: '#F7786B', // Vibrant red
-          icon: 'fas fa-wrench',
-          components: ['Predictive Threat Modeling', 'Advanced API Security', 'Natural Language Query Interface'],
-        },
-      ];
-
       const svgNS = 'http://www.w3.org/2000/svg';
 
       // Create SVG element
