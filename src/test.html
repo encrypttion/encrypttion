@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sekura.ai- AI Meets CyberSecurity</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+        
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            height: 100%;
+            background-color: #0a0a0a;
+            color: #ffffff;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #00fffc, #ff00ea);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+        
+        .image-container {
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(0, 255, 252, 0.3), rgba(255, 0, 234, 0.3));
+            opacity: 0.7;
+        }
+        
+        .email-form {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            max-width: 400px;
+        }
+        
+        .email-form input[type="email"] {
+            flex-grow: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            font-size: 1rem;
+        }
+        
+        .email-form button {
+            padding: 10px 20px;
+            background: linear-gradient(45deg, #00fffc, #ff00ea);
+            border: none;
+            border-radius: 0 5px 5px 0;
+            color: #ffffff;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+        
+        .email-form button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sekura.ai</h1>
+        <p>We're working on something amazing where <span class="highlight">Artificial Intelligence</span> redefines the future of <span class="highlight">Cybersecurity</span>.</p>
+        <p>Stay tuned for the launch. We promise it will be worth the wait.</p>
+        <div class="image-container">
+            <img src="./sekura.webp" alt="AI-enhanced neural network defending against cyber threats">
+            <div class="image-overlay"></div>
+        </div>
+        <form class="email-form", id="waitlistForm", title="Join Waitlist"
+                                                     action="https://shiny-tooth-96ca.tikka-nagi.workers.dev/">
+
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Notify Me</button>
+        </form>
+    </div>
+</body>
+</html>
